@@ -1,110 +1,111 @@
-CREATE TABLE [usuarios] (
-  [id_usuario] int PRIMARY KEY IDENTITY(1, 1),
-  [nombre] nvarchar(255),
-  [apellidos] nvarchar(255),
-  [id_especialidad] int,
-  [clave] nvarchar(255),
-  [estado] boolean
+
+CREATE DATABASE hospital_sys;
+GO
+USE hospital_sys;
+GO
+
+CREATE TABLE specialties (
+  specialty_id int PRIMARY KEY IDENTITY(1, 1),
+  name NVARCHAR(250)
 )
 GO
 
-CREATE TABLE [pacientes] (
-  [id_paciente] int PRIMARY KEY IDENTITY(1, 1),
-  [nombre] nvarchar(255),
-  [apellido] nvarchar(255),
-  [sex] boolean,
-  [dni] nvarchar(255),
-  [id_usuario] id,
-  [grado] nvarchar(255),
-  [sit_admin] boolean,
-  [estadoPML] nvarchar(255),
-  [id_depart] int,
-  [arma] nvarchar(255),
-  [n_pentaje] int,
-  [guarnicion] nvarchar(255),
-  [id_categoria_militar] id
+CREATE TABLE departaments (
+  departament_id int PRIMARY KEY IDENTITY(1, 1),
+  name nvarchar(255)
 )
 GO
 
-CREATE TABLE [categorias] (
-  [id_categoria] int PRIMARY KEY IDENTITY(1, 1),
-  [nombre] nvarchar(255)
+CREATE TABLE categories (
+  category_id int PRIMARY KEY IDENTITY(1, 1),
+  name nvarchar(255)
 )
 GO
 
-CREATE TABLE [departamentos] (
-  [id_depart] int PRIMARY KEY IDENTITY(1, 1),
-  [nombre] nvarchar(255)
+CREATE TABLE users (
+  user_id INTEGER PRIMARY KEY IDENTITY(1, 1),
+  name nvarchar(255),
+  last_nmae nvarchar(255),  
+  user_password  nvarchar(255),
+  status INTEGER,
+  user_type INTEGER,
+  specialty_id INTEGER NOT NULL,
+  departament_id INTEGER,
+  CONSTRAINT fkuser_sp FOREIGN KEY (specialty_id) REFERENCES specialties (specialty_id),
+  CONSTRAINT fkuser_dept FOREIGN KEY (departament_id) REFERENCES departaments (departament_id)
 )
 GO
 
-CREATE TABLE [descansos] (
-  [id_descansos] int PRIMARY KEY IDENTITY(1, 1),
-  [id_paciente] int,
-  [estado_acta] boolean,
-  [diagnostico] nvarchar(255),
-  [fechaPMI] date,
-  [fecha_inicio] date,
-  [fecha_final] date,
-  [situacion] nvarchar(255),
-  [id_usuario] int,
-  [unidad] int
+
+CREATE TABLE [sessions] (
+  user_id INTEGER,
+  log_time datetime2,
+  log_type INTEGER,
+  CONSTRAINT fksession_user FOREIGN KEY (user_id) REFERENCES users (user_id),
 )
 GO
 
-CREATE TABLE [especialidades] (
-  [id_especialidad] int PRIMARY KEY IDENTITY(1, 1),
-  [nombre] nvarchar(255)
+CREATE TABLE patients (
+  patient_id int PRIMARY KEY IDENTITY(1, 1),
+  patient_name nvarchar(255),
+  last_name nvarchar(255),
+  gender bit,
+  dni nvarchar(255),  
+  grade nvarchar(255),
+  sit_admin nvarchar(255),
+  state_pml nvarchar(255),
+  arma nvarchar(255),
+  guarnicion nvarchar(255),
+  category_id int,
+  CONSTRAINT fkpatient_category FOREIGN KEY (category_id) REFERENCES categories (category_id),
 )
 GO
 
-CREATE TABLE [reports] (
-  [id_report] int PRIMARY KEY IDENTITY(1, 1),
-  [fecha] date,
-  [id_paciente] int,
-  [id_usuario] int,
-  [antecedentes] nvarchar(255),
-  [enfermedades] nvarchar(255),
-  [examen_clinico] nvarchar(255),
-  [apoyo_diagnostico] nvarchar(255),
-  [diagonostico] nvarchar(255),
-  [etiologia] nvarchar(255),
-  [tratamiento] nvarchar(255),
-  [evolucion] nvarchar(255),
-  [pronostico] nvarchar(255),
-  [secuela] nvarchar(255),
-  [magnitud_discapacidad] nvarchar(255),
-  [grado_dependencia] nvarchar(255),
-  [relacion_enfermedad] nvarchar(255),
-  [fecha_tratamiento] date,
-  [trabajo] nvarchar(255),
-  [guarniciones] nvarchar(255),
-  [fecha_junta] date,
-  [fecha_reevaluacion] date,
-  [conclusiones] nvarchar(255)
+
+
+CREATE TABLE appointments (
+  appointment_id int PRIMARY KEY IDENTITY(1, 1),
+  is_work_break bit,
+  medical_history TEXT,
+  clinical_examination TEXT,
+  current_diseases TEXT,
+  diagnostic_support TEXT,
+  diagnosis TEXT,
+  etiology TEXT,
+  evolution TEXT,
+  secual TEXT,
+  treatment TEXT,
+  forecat TEXT,
+  magnitude_dependecny TEXT,
+  degree_dependencty TEXT,
+  comments_service_disease TEXT,
+  approximate_time TEXT,
+  works_to_realize TEXT,
+  guarnizion TEXT,
+  date_medical_meeting datetime2,
+  next_evaluation_date datetime2,
+  conclusions TEXT,
+  patient_id INTEGER,
+  user_id INTEGER,
+  CONSTRAINT fkappointment_patient FOREIGN KEY (patient_id) REFERENCES patients (patient_id),
+  CONSTRAINT fkappointment_user FOREIGN KEY (user_id) REFERENCES users (user_id),
 )
 GO
 
-ALTER TABLE [pacientes] ADD FOREIGN KEY ([id_usuario]) REFERENCES [usuarios] ([id_usuario])
-GO
 
-ALTER TABLE [pacientes] ADD FOREIGN KEY ([id_depart]) REFERENCES [departamentos] ([id_depart])
-GO
 
-ALTER TABLE [usuarios] ADD FOREIGN KEY ([id_especialidad]) REFERENCES [especialidades] ([id_especialidad])
-GO
-
-ALTER TABLE [pacientes] ADD FOREIGN KEY ([id_paciente]) REFERENCES [descansos] ([id_paciente])
-GO
-
-ALTER TABLE [usuarios] ADD FOREIGN KEY ([id_usuario]) REFERENCES [descansos] ([id_usuario])
-GO
-
-ALTER TABLE [pacientes] ADD FOREIGN KEY ([id_categoria_militar]) REFERENCES [categorias] ([id_categoria])
-GO
-
-ALTER TABLE [reports] ADD FOREIGN KEY ([id_paciente]) REFERENCES [pacientes] ([id_paciente])
-GO
-
-ALTER TABLE [reports] ADD FOREIGN KEY ([id_usuario]) REFERENCES [usuarios] ([id_usuario])
+CREATE TABLE work_breaks (
+  break_id int PRIMARY KEY IDENTITY(1, 1),  
+  doc_status nvarchar(255),
+  diagnostic nvarchar(255),
+  date_pmi date,
+  start_date date,
+  end_date date,
+  situation nvarchar(255),
+  unit int,
+  user_id int,
+  patient_id int,
+  CONSTRAINT fkbreak_patient FOREIGN KEY (patient_id) REFERENCES patients (patient_id),
+  CONSTRAINT fkbreak_user FOREIGN KEY (user_id) REFERENCES users (user_id),
+)
 GO

@@ -1,0 +1,15 @@
+D:\Proyects\repositories\hospital-sys\hospital-sys\bin\Debug\hospital-sys.exe.config
+D:\Proyects\repositories\hospital-sys\hospital-sys\bin\Debug\hospital-sys.exe
+D:\Proyects\repositories\hospital-sys\hospital-sys\bin\Debug\hospital-sys.pdb
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital-sys.csprojAssemblyReference.cache
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.FichaMedica.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.Descansos_Medicos.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.Form2.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.PanelGeneral.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.Properties.Resources.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital-sys.csproj.GenerateResource.cache
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital-sys.exe
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital-sys.pdb
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.Form1.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.DescansoForm.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.UserForm.resources

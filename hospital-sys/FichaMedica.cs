@@ -31,5 +31,10 @@ namespace hospital_sys
         {
 
         }
+
+        private void textBox22_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

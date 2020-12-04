@@ -46,11 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Descansos Medicos.cs">
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DescansoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Descansos Medicos.Designer.cs">
-      <DependentUpon>Descansos Medicos.cs</DependentUpon>
+    <Compile Include="DescansoForm.Designer.cs">
+      <DependentUpon>DescansoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichaMedica.Designer.cs">
+      <DependentUpon>FichaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelMedico.Designer.cs">
+      <DependentUpon>PanelMedico.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,8 +85,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Descansos Medicos.resx">
-      <DependentUpon>Descansos Medicos.cs</DependentUpon>
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DescansoForm.resx">
+      <DependentUpon>DescansoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FichaMedica.resx">
+      <DependentUpon>FichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelMedico.resx">
+      <DependentUpon>PanelMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -90,6 +118,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
