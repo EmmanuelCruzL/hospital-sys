@@ -36,5 +36,29 @@ namespace hospital_sys
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UserForm frmUser = new UserForm();
+            frmUser.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            DescansoForm frm = new DescansoForm();
+            frm.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            UserForm frmUser = new UserForm();
+            frmUser.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            UserForm frmUser = new UserForm();
+            frmUser.Show();
+        }
     }
 }

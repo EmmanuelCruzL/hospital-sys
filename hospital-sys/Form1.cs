@@ -19,16 +19,9 @@ namespace hospital_sys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conexion con = new Conexion();
+            
 
-            if (con.Connect())
-            {
-                MessageBox.Show("Conexion exitosa");
-            }
-            else
-            {
-                MessageBox.Show("Error en la conexion");
-            }
+            
         }
     }
 }

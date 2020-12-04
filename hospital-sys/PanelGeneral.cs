@@ -16,5 +16,30 @@ namespace hospital_sys
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Descansos_Medicos frm = new Descansos_Medicos();
+            frm.Show();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Descansos_Medicos frm = new Descansos_Medicos();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Descansos_Medicos frm = new Descansos_Medicos();
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Descansos_Medicos frm = new Descansos_Medicos();
+            frm.Show();
+        }
     }
 }

@@ -9,20 +9,21 @@ namespace hospital_sys
   public  class Conexion
     {
 
-        public  Boolean Connect()
+        public SqlConnection Connect()
         {
-            bool isConnect = false;
+            SqlConnection conexion = null;
+            
             try
             {
-                SqlConnection conexion = new SqlConnection("server=DESKTOP-2E6H87O\\SQLEXPRESS ; database=hospital_sys ; integrated security = true");
+                conexion = new SqlConnection("server=DESKTOP-2E6H87O\\SQLEXPRESS ; database=hospital_sys ; integrated security = true");
                 conexion.Open();
                 Console.WriteLine("Conexion exitosa.");
-                isConnect = true;
+                
             }
             catch {
                 Console.WriteLine("Error en la conexion");
             }
-            return isConnect;
+            return conexion;
         }
 
         
