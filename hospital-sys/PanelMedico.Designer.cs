@@ -35,7 +35,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnNuevoPaciente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -139,7 +139,7 @@
             this.PACIENTES.Controls.Add(this.button8);
             this.PACIENTES.Controls.Add(this.button7);
             this.PACIENTES.Controls.Add(this.button6);
-            this.PACIENTES.Controls.Add(this.button5);
+            this.PACIENTES.Controls.Add(this.btnNuevoPaciente);
             this.PACIENTES.Controls.Add(this.groupBox1);
             this.PACIENTES.Location = new System.Drawing.Point(4, 22);
             this.PACIENTES.Name = "PACIENTES";
@@ -195,15 +195,15 @@
             this.button6.Text = "Guardar";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnNuevoPaciente
             // 
-            this.button5.Location = new System.Drawing.Point(722, 21);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 39);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Nuevo";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnNuevoPaciente.Location = new System.Drawing.Point(722, 21);
+            this.btnNuevoPaciente.Name = "btnNuevoPaciente";
+            this.btnNuevoPaciente.Size = new System.Drawing.Size(89, 39);
+            this.btnNuevoPaciente.TabIndex = 1;
+            this.btnNuevoPaciente.Text = "Nuevo";
+            this.btnNuevoPaciente.UseVisualStyleBackColor = true;
+            this.btnNuevoPaciente.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
@@ -215,7 +215,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtNombrePaciente);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label4);
@@ -294,13 +294,13 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "EST.  PML.";
             // 
-            // textBox4
+            // txtNombrePaciente
             // 
-            this.textBox4.Location = new System.Drawing.Point(322, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(322, 28);
+            this.txtNombrePaciente.Name = "txtNombrePaciente";
+            this.txtNombrePaciente.Size = new System.Drawing.Size(100, 20);
+            this.txtNombrePaciente.TabIndex = 3;
+            this.txtNombrePaciente.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -875,7 +875,7 @@
         private System.Windows.Forms.TabPage notificaciones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNombrePaciente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
@@ -893,7 +893,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnNuevoPaciente;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label14;

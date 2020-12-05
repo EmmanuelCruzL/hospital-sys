@@ -53,6 +53,26 @@ namespace hospital_sys
             return tabla;
         }
 
+        public DataTable getCategories()
+        {
+
+            DataTable tabla = new DataTable();
+            try
+            {
+                String query = "SELECT * FROM categories";
+                SqlCommand command = new SqlCommand(query, con.Connect());
+
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                da.Fill(tabla);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            return tabla;
+        }
 
 
     }

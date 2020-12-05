@@ -13,3 +13,4 @@ D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital-sys.pdb
 D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.Form1.resources
 D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.DescansoForm.resources
 D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.UserForm.resources
+D:\Proyects\repositories\hospital-sys\hospital-sys\obj\Debug\hospital_sys.PatientForm.resources
