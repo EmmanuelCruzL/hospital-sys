@@ -49,7 +49,9 @@ namespace hospital_sys
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            PatientForm patient = new PatientForm();
+            patient.ShowDialog();
+            CargarDatos();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
