@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="cmbController.cs" />
     <Compile Include="DescansoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,10 @@
     <Compile Include="FichaMedica.Designer.cs">
       <DependentUpon>FichaMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="loginController.cs" />
+    <Compile Include="loginModel.cs" />
+    <Compile Include="patientController.cs" />
+    <Compile Include="patientModel.cs" />
     <Compile Include="PanelMedico.cs">
       <SubType>Form</SubType>
     </Compile>

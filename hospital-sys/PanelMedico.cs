@@ -12,9 +12,19 @@ namespace hospital_sys
 {
     public partial class Descansos_Medicos : Form
     {
-        public Descansos_Medicos()
+        userController users = new userController();
+        patientController patient = new patientController();
+        public Descansos_Medicos(userModel user)
         {
             InitializeComponent();
+            CargarDatos();
+            userText.Text = user.Name;
+            MessageBox.Show(user.Id.ToString());
+            MessageBox.Show(user.User_type.ToString());
+            if(user.User_type == 1)
+            {
+                this.tabControl1.TabPages.Remove(userPage);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,8 +49,7 @@ namespace hospital_sys
 
         private void button5_Click(object sender, EventArgs e)
         {
-            UserForm frmUser = new UserForm();
-            frmUser.Show();
+            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -59,6 +68,36 @@ namespace hospital_sys
         {
             UserForm frmUser = new UserForm();
             frmUser.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public  void CargarDatos()
+        {
+            
+          
+
+            
+
+            UsuariosT.DataSource = users.getUsers();
+            pacienteT.DataSource = patient.getPatients();
+
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            UserForm frmUser = new UserForm();
+            frmUser.ShowDialog();
+            CargarDatos();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

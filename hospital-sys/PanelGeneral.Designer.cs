@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UserPanel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,13 +50,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "USUARIO";
             // 
-            // textBox1
+            // UserPanel
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.UserPanel.Location = new System.Drawing.Point(111, 13);
+            this.UserPanel.Name = "UserPanel";
+            this.UserPanel.ReadOnly = true;
+            this.UserPanel.Size = new System.Drawing.Size(100, 20);
+            this.UserPanel.TabIndex = 1;
             // 
             // label2
             // 
@@ -148,7 +148,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.label1);
             this.Name = "PanelGeneral";
             this.Text = "PanelGeneral";
@@ -160,7 +160,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UserPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

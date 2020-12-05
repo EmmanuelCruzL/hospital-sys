@@ -16,7 +16,7 @@ namespace hospital_sys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PanelGeneral());
+            Application.Run(new Form2());
         }
     }
 }
