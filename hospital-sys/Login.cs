@@ -26,20 +26,25 @@ namespace hospital_sys
             try
             {
                 loginController login = new loginController();
+                bool logins = login.login(user);
                 
-                if (login.login(user)!=null)
+                if (logins )
                 {
                     MessageBox.Show("Conexion Exitosa");
-                    PanelGeneral frmGeneral = new PanelGeneral(login.login(user));
+                    PanelGeneral frmGeneral = new PanelGeneral();
                     this.Hide();
                     frmGeneral.Show();
 
+                }
+                else
+                {
+                    MessageBox.Show("Error usuario y constraseña");
                 }
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.ToString()); 
-                MessageBox.Show("Error usuario y contraseña");
+               
             }
         }
     }

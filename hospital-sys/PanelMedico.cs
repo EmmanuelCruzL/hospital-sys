@@ -14,17 +14,18 @@ namespace hospital_sys
     {
         userController users = new userController();
         patientController patient = new patientController();
-        public Descansos_Medicos(userModel user)
+        public Descansos_Medicos(int page)
         {
             InitializeComponent();
             CargarDatos();
-            userText.Text = user.Name;
+            this.tabControl1.SelectedIndex = page;
+           /* userText.Text = user.Name;
             MessageBox.Show(user.Id.ToString());
             MessageBox.Show(user.User_type.ToString());
             if(user.User_type == 1)
             {
                 this.tabControl1.TabPages.Remove(userPage);
-            }
+            //}*/
         }
 
         private void label1_Click(object sender, EventArgs e)

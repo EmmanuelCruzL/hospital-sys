@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace hospital_sys
 {
-   public class patientController
+    class patientController
     {
         Conexion con = new Conexion();
 

@@ -13,10 +13,21 @@ namespace hospital_sys
     public partial class UserForm : Form
     {
         userController userC = new userController();
+        userModel user = new userModel(); 
         public UserForm()
         {
             InitializeComponent();
             cargarDepartaments();
+        }
+        public UserForm(int id)
+        {
+            InitializeComponent();
+            cargarDepartaments();
+            user = userC.searchUser(id);
+            txtName.Text = user.Name;
+            txtApellido.Text = user.Last_name;
+            
+            txtClave.Text = user.Password;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

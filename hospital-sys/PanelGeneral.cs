@@ -13,35 +13,43 @@ namespace hospital_sys
     public partial class PanelGeneral : Form
     {
         userModel user = new userModel();
-        public PanelGeneral(userModel user)
+        userController userC = new userController();
+        public PanelGeneral()
         {
             InitializeComponent();
-            this.UserPanel.Text = user.Name;
-            this.user = user;
+           // user = userC.searchUser(id);
+            this.UserPanel.Text = "admin";
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Descansos_Medicos frm = new Descansos_Medicos(user);
-            frm.Show();
+            Descansos_Medicos frm = new Descansos_Medicos(0);
+            
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Descansos_Medicos frm = new Descansos_Medicos(user);
+            Descansos_Medicos frm = new Descansos_Medicos(3);
             frm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Descansos_Medicos frm = new Descansos_Medicos(user);
+            Descansos_Medicos frm = new Descansos_Medicos(1);
             frm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Descansos_Medicos frm = new Descansos_Medicos(user);
+            Descansos_Medicos frm = new Descansos_Medicos(2);
+            frm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Descansos_Medicos frm = new Descansos_Medicos(5);
             frm.Show();
         }
     }

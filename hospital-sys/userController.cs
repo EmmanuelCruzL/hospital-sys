@@ -81,6 +81,34 @@ namespace hospital_sys
             }
             return success;
         }
-    
+
+        public userModel searchUser(int id)
+        {
+            userModel user= new userModel();
+            try
+            {
+                SqlCommand command = new SqlCommand(null, con.Connect());
+                command.CommandText = "select * from  users WHERE user_id = " + id;
+                SqlDataReader dr = command.ExecuteReader();
+                while (dr.NextResult())
+                {
+                    user.Id = dr.GetInt32(1);
+                    user.Name = dr.GetString(2);
+                    user.Last_name = dr.GetString(3);
+                    user.Password = dr.GetString(4);
+                    user.Status = dr.GetInt32(5);
+                    user.User_type = dr.GetInt32(6);
+                    user.Specialty = dr.GetInt32(7);
+                    user.Departament = dr.GetInt32(8);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return user;
+        }
+
     }
 }

@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.UserPanel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txtPaciente = new System.Windows.Forms.Button();
+            this.btnDescanso = new System.Windows.Forms.Button();
+            this.btnNotify = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -68,54 +68,55 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "PANEL DE CONTROL ADMINISTRADOR ";
             // 
-            // button1
+            // txtPaciente
             // 
-            this.button1.Location = new System.Drawing.Point(95, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 84);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Pacientes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtPaciente.Location = new System.Drawing.Point(95, 155);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(148, 84);
+            this.txtPaciente.TabIndex = 3;
+            this.txtPaciente.Text = "Pacientes";
+            this.txtPaciente.UseVisualStyleBackColor = true;
+            this.txtPaciente.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnDescanso
             // 
-            this.button2.Location = new System.Drawing.Point(274, 155);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 84);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "DESCANSOS MEDICOS";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDescanso.Location = new System.Drawing.Point(274, 155);
+            this.btnDescanso.Name = "btnDescanso";
+            this.btnDescanso.Size = new System.Drawing.Size(125, 84);
+            this.btnDescanso.TabIndex = 4;
+            this.btnDescanso.Text = "DESCANSOS MEDICOS";
+            this.btnDescanso.UseVisualStyleBackColor = true;
+            this.btnDescanso.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnNotify
             // 
-            this.button3.Location = new System.Drawing.Point(425, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 84);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "NOTIFICACIONES";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnNotify.Location = new System.Drawing.Point(425, 155);
+            this.btnNotify.Name = "btnNotify";
+            this.btnNotify.Size = new System.Drawing.Size(125, 84);
+            this.btnNotify.TabIndex = 5;
+            this.btnNotify.Text = "NOTIFICACIONES";
+            this.btnNotify.UseVisualStyleBackColor = true;
+            this.btnNotify.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnUsuario
             // 
-            this.button4.Location = new System.Drawing.Point(95, 263);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 82);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "USUARIO";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnUsuario.Location = new System.Drawing.Point(95, 263);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(148, 82);
+            this.btnUsuario.TabIndex = 6;
+            this.btnUsuario.Text = "USUARIO";
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnReportes
             // 
-            this.button5.Location = new System.Drawing.Point(274, 263);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 82);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "REPORTES";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnReportes.Location = new System.Drawing.Point(274, 263);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(125, 82);
+            this.btnReportes.TabIndex = 7;
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -142,11 +143,11 @@
             this.ClientSize = new System.Drawing.Size(884, 507);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReportes);
+            this.Controls.Add(this.btnUsuario);
+            this.Controls.Add(this.btnNotify);
+            this.Controls.Add(this.btnDescanso);
+            this.Controls.Add(this.txtPaciente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.label1);
@@ -162,11 +163,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox UserPanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button txtPaciente;
+        private System.Windows.Forms.Button btnDescanso;
+        private System.Windows.Forms.Button btnNotify;
+        private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label3;
     }
