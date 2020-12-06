@@ -99,7 +99,7 @@ namespace hospital_sys
                     patient.Id = dr.GetInt32(1);
                     patient.Name = dr.GetString(2);
                     patient.Last_name = dr.GetString(3);
-                    patient.Gender = dr.GetInt32(4);
+                    patient.Gender = dr.GetString(4);
                     patient.Dni = dr.GetString(5);
                     patient.Grade = dr.GetString(6);
                     patient.Sit_admin = dr.GetString(7);

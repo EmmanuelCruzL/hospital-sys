@@ -15,6 +15,7 @@ namespace hospital_sys
         public PatientForm()
         {
             InitializeComponent();
+            llenarCmb();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -23,7 +24,7 @@ namespace hospital_sys
             patientModel patient= new patientModel();
             patient.Name = txtName.Text;
             patient.Last_name = txtApp.Text;
-            patient.Gender =Int32.Parse( txtGenero.Text);
+            patient.Gender = txtGenero.Text;
             patient.Dni = txtDni.Text;
             patient.Grade = txtGrado.Text;
             patient.Sit_admin = txtSitAdmin.Text;

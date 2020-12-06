@@ -63,7 +63,7 @@ namespace hospital_sys
 
         private void button7_Click(object sender, EventArgs e)
         {
-            UserForm frmUser = new UserForm();
+            PatientForm frmUser = new PatientForm();
             frmUser.Show();
         }
 
@@ -99,6 +99,22 @@ namespace hospital_sys
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            userModel user = new userModel();
+            if (UsuariosT.SelectedRows.Count > 0)
+            {
+                user.Id = Int32.Parse(UsuariosT.CurrentRow.Cells["ID"].Value.ToString());
+                UserForm userForm = new UserForm(user.Id);
+            }
+
+        }
+
+        private void Descansos_Medicos_Load(object sender, EventArgs e)
         {
 
         }

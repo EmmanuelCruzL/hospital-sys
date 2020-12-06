@@ -725,9 +725,10 @@
             this.UsuariosT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.UsuariosT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UsuariosT.Location = new System.Drawing.Point(0, 53);
+            this.UsuariosT.MultiSelect = false;
             this.UsuariosT.Name = "UsuariosT";
-            this.UsuariosT.ReadOnly = true;
             this.UsuariosT.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.UsuariosT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.UsuariosT.Size = new System.Drawing.Size(1000, 439);
             this.UsuariosT.TabIndex = 0;
             this.UsuariosT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -816,6 +817,7 @@
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -840,6 +842,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Descansos_Medicos";
             this.Text = "Descansos_Medicos";
+            this.Load += new System.EventHandler(this.Descansos_Medicos_Load);
             this.tabControl1.ResumeLayout(false);
             this.PACIENTES.ResumeLayout(false);
             this.PACIENTES.PerformLayout();

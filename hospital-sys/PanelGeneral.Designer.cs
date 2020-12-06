@@ -80,11 +80,11 @@
             // 
             // btnDescanso
             // 
-            this.btnDescanso.Location = new System.Drawing.Point(274, 155);
+            this.btnDescanso.Location = new System.Drawing.Point(95, 263);
             this.btnDescanso.Name = "btnDescanso";
-            this.btnDescanso.Size = new System.Drawing.Size(125, 84);
+            this.btnDescanso.Size = new System.Drawing.Size(148, 84);
             this.btnDescanso.TabIndex = 4;
-            this.btnDescanso.Text = "DESCANSOS MEDICOS";
+            this.btnDescanso.Text = "USUARIOS";
             this.btnDescanso.UseVisualStyleBackColor = true;
             this.btnDescanso.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -100,19 +100,19 @@
             // 
             // btnUsuario
             // 
-            this.btnUsuario.Location = new System.Drawing.Point(95, 263);
+            this.btnUsuario.Location = new System.Drawing.Point(251, 155);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(148, 82);
             this.btnUsuario.TabIndex = 6;
-            this.btnUsuario.Text = "USUARIO";
+            this.btnUsuario.Text = "PANEL MEDICO";
             this.btnUsuario.UseVisualStyleBackColor = true;
             this.btnUsuario.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(274, 263);
+            this.btnReportes.Location = new System.Drawing.Point(251, 263);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(125, 82);
+            this.btnReportes.Size = new System.Drawing.Size(148, 82);
             this.btnReportes.TabIndex = 7;
             this.btnReportes.Text = "REPORTES";
             this.btnReportes.UseVisualStyleBackColor = true;

@@ -25,8 +25,9 @@ namespace hospital_sys
         private void button1_Click(object sender, EventArgs e)
         {
             Descansos_Medicos frm = new Descansos_Medicos(0);
-            
-            
+            frm.Show();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
