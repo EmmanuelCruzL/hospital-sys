@@ -110,6 +110,7 @@ namespace hospital_sys
             {
                 user.Id = Int32.Parse(UsuariosT.CurrentRow.Cells["ID"].Value.ToString());
                 UserForm userForm = new UserForm(user.Id);
+                userForm.ShowDialog();
             }
 
         }

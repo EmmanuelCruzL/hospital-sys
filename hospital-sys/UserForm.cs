@@ -23,11 +23,13 @@ namespace hospital_sys
         {
             InitializeComponent();
             cargarDepartaments();
-            user = userC.searchUser(id);
-            txtName.Text = user.Name;
-            txtApellido.Text = user.Last_name;
             
-            txtClave.Text = user.Password;
+            user = userC.searchUser(id);
+            MessageBox.Show(user.Name);
+           
+            this.txtApellido.Text = user.Last_name;
+
+            this.txtClave.Text = user.Password;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
