@@ -38,7 +38,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "INSERT INTO patients VALUES ('" + patient.Name + "','" + patient.Last_name + "','" + patient.Gender + "'," + patient.Dni + ",'" + patient.Grade + "','" + patient.Sit_admin + "','" + patient.State_pml + "','" + patient.Arma + "','" + patient.Guarnicion + "','" + patient.Category + "')";
+                command.CommandText = "INSERT INTO patients VALUES ('" + patient.Name + "','" + patient.Last_name + "','" + patient.Gender + "'," + patient.Dni + ",'" + patient.Grade + "','" + patient.Sit_admin + "','" + patient.State_pml + "','" + patient.Arma + "','" + patient.Guarnicion + "'," + patient.Category + ")";
                 command.Prepare();
                 command.ExecuteNonQuery();
                 register = true;

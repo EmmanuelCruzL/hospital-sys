@@ -31,7 +31,7 @@ namespace hospital_sys
             patient.State_pml = txtStatePml.Text;
             patient.Arma = txtArma.Text;
             patient.Guarnicion = txtGuarnicion.Text;
-
+            patient.Category = 1;
             if (patientC.createUser(patient))
             {
                 MessageBox.Show("Registro Exitoso!!");
@@ -60,6 +60,8 @@ namespace hospital_sys
         void llenarCmb()
         {
             cmbController cmb = new cmbController();
+            cmbCategoria.DisplayMember = "name";
+            cmbCategoria.ValueMember = "category_id";
             cmbCategoria.DataSource = cmb.getCategories();
         }
 
