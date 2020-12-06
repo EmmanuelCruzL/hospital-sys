@@ -153,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PanelGeneral";
             this.Text = "PanelGeneral";
+            this.Load += new System.EventHandler(this.PanelGeneral_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,43 +14,60 @@ namespace hospital_sys
     {
         userController userC = new userController();
         userModel user = new userModel(); 
+        int edit = 0;
         public UserForm()
         {
             InitializeComponent();
             cargarDepartaments();
         }
-        public UserForm(int id)
+        public UserForm(userModel user)
         {
+            
             InitializeComponent();
             cargarDepartaments();
+            this.lbMode.Text = "EDITAR USUARIO";
+            this.btnSave.Text = "Actualizar";
+            this.user = user;
+            edit = 1;
+            editMode(user);
             
-            user = userC.searchUser(id);
-            MessageBox.Show(user.Name);
-           
-            this.txtApellido.Text = user.Last_name;
-
-            this.txtClave.Text = user.Password;
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            userModel user = new userModel();
-            user.Name = txtName.Text;
-            user.Last_name = txtApellido.Text;
-            user.Password = txtApellido.Text;
-            user.Status = 1;
-            user.User_type = 1;
-            user.Departament = 1;
-            user.Specialty = 1;
-            if (userC.createUser(user))
+            this.user.Name = txtName.Text;
+            this.user.Last_name = txtApellido.Text;
+            this.user.Password = txtApellido.Text;
+            this.user.Status = typeUser();
+            this.user.User_type = cmbTipo.SelectedIndex;
+            this.user.Departament = Int32.Parse(cmbDepartaments.SelectedValue.ToString());
+            this.user.Specialty = Int32.Parse(cmbSpecialties.SelectedValue.ToString());
+            if (edit == 0)
             {
-                MessageBox.Show("Registro Exitoso!!");
-                this.Hide();
+                                
+                if (userC.createUser(user))
+                {
+                    MessageBox.Show("Registro Exitoso!!");
+                    this.Hide();
 
+                }
+                else
+                {
+                    MessageBox.Show("Error en Registrar Compruebe los datos !!");
+                }
             }
             else
             {
-                MessageBox.Show("Error en Registrar Compruebe los datos !!");
+                if (userC.editUser(user))
+                {
+                    MessageBox.Show("Actualización Exitosa!!");
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Error al Actualizar");
+                }
             }
         }
 
@@ -75,6 +92,48 @@ namespace hospital_sys
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbDepartaments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSpecialties_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        int typeUser()
+        {
+            int option = -1;
+            if (cmbTipo.SelectedIndex != -1)
+            {
+                option = cmbTipo.SelectedIndex;
+            }
+            else
+            {
+                MessageBox.Show("Por Favor llenar Campos");
+            }
+
+            return option;
+        } 
+
+        void editMode(userModel user) 
+        {
+            txtName.Text = user.Name;
+            txtApellido.Text = user.Last_name;
+            txtClave.Text = user.Password;
+            cmbTipo.SelectedIndex = user.User_type;
+            cmbSpecialties.SelectedValue = user.Specialty;
+            MessageBox.Show("" +user.Specialty);
+            cmbDepartaments.SelectedValue = user.Departament;
+            MessageBox.Show(""+user.Departament);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace hospital_sys
     {
         userController users = new userController();
         patientController patient = new patientController();
+        cmbController cmb = new cmbController();
         public Descansos_Medicos(int page)
         {
             InitializeComponent();
@@ -109,8 +110,16 @@ namespace hospital_sys
             if (UsuariosT.SelectedRows.Count > 0)
             {
                 user.Id = Int32.Parse(UsuariosT.CurrentRow.Cells["ID"].Value.ToString());
-                UserForm userForm = new UserForm(user.Id);
+                user.Name = (UsuariosT.CurrentRow.Cells["Nombre"].Value.ToString());
+                user.Last_name = (UsuariosT.CurrentRow.Cells["Apellido"].Value.ToString());
+                user.Password = (UsuariosT.CurrentRow.Cells["Contraseña"].Value.ToString());
+                user.Status = Int32.Parse(UsuariosT.CurrentRow.Cells["Estado"].Value.ToString());
+                user.User_type = Int32.Parse(UsuariosT.CurrentRow.Cells["Tipo"].Value.ToString());
+                user.Specialty = cmb.FindSpeciality(UsuariosT.CurrentRow.Cells["Especialidad"].Value.ToString());
+                user.Departament = cmb.FindDepartament(UsuariosT.CurrentRow.Cells["Departamento"].Value.ToString());
+                UserForm userForm = new UserForm(user);
                 userForm.ShowDialog();
+                CargarDatos();
             }
 
         }
@@ -119,5 +128,12 @@ namespace hospital_sys
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            String name = txtSearch.Text;
+            pacienteT.DataSource = patient.searchPatients(name);
+        }
+        
     }
 }

@@ -37,14 +37,14 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(94, 223);
+            this.txtUser.Location = new System.Drawing.Point(94, 93);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(175, 20);
             this.txtUser.TabIndex = 3;
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(94, 87);
+            this.txtPwd.Location = new System.Drawing.Point(94, 230);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(175, 20);
             this.txtPwd.TabIndex = 4;

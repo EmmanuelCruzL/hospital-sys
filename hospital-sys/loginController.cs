@@ -18,7 +18,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "SELECT * FROM users  WHERE last_nmae  = '"+user.Name+"'AND user_password = '"+user.Password+"' ";
+                command.CommandText = "SELECT * FROM users  WHERE last_name  = '"+user.Name+"'AND user_password = '"+user.Password+"' ";
                 SqlDataReader dr = command.ExecuteReader();
 
                 if (dr.Read())

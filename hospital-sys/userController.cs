@@ -19,7 +19,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "SELECT user_id as ID  ,users.name as Nombre  ,last_nmae as Apellido,user_password as Contraseña, status as Estado ,user_type as Tipo,specialties.name as Epecialidad,departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id";
+                command.CommandText = "SELECT user_id as ID  ,users.name as Nombre  ,last_name as Apellido,user_password as Contraseña, status as Estado ,user_type as Tipo,specialties.name as Especialidad,departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id";
                 SqlDataReader dr = command.ExecuteReader();
                 tabla.Load(dr);
 
@@ -38,7 +38,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "INSERT INTO users VALUES ('"+user.Name+"','"+user.Last_name+"','"+user.Password+"',"+user.Status+",'"+user.User_type+"','"+user.Specialty+"','"+user.Departament+"')";
+                command.CommandText = "INSERT INTO users VALUES ('"+user.Name+"','"+user.Last_name+"','"+user.Password+"','"+user.Status+"','"+user.User_type+"','"+user.Specialty+"','"+user.Departament+"')";
                 command.Prepare();
                 command.ExecuteNonQuery();
                 register = true;
@@ -54,7 +54,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "UPDATE    users SET(name ='" + user.Name + "',last_nmae = '" + user.Last_name + "',user_password ='" + user.Password + "',status = " + user.Status + ", user_type =" + user.User_type + ", specialty_id =" + user.Specialty + ", departament_id =" + user.Departament + "WHERE user_id = "+user.Id+")";
+                command.CommandText = "UPDATE    users SET name ='" + user.Name + "',last_name = '" + user.Last_name + "',user_password ='" + user.Password + "',status = " + user.Status + ", user_type =" + user.User_type + ", specialty_id =" + user.Specialty + ", departament_id =" + user.Departament + "WHERE user_id = "+user.Id+"";
                 command.Prepare();
                 command.ExecuteNonQuery();
                 success = true;
@@ -88,11 +88,11 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "select * from  users WHERE user_id = " + id;
+                command.CommandText = "SELECT * FROM  users WHERE user_id = " + id;
                 SqlDataReader dr = command.ExecuteReader();
-                while (dr.NextResult())
+                while (dr.NextResult()) 
                 {
-                    user.Id = dr.GetInt32(1);
+                    user.Id = id; 
                     user.Name = dr.GetString(2);
                     user.Last_name = dr.GetString(3);
                     user.Password = dr.GetString(4);

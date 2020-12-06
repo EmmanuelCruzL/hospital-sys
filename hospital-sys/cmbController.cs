@@ -75,5 +75,45 @@ namespace hospital_sys
         }
 
 
+        public  int FindSpeciality(String name)
+        {
+            int id =-1;
+            try
+            {
+                String query = "SELECT specialty_id FROM specialties WHERE name = '" + name+"'" ;
+                SqlCommand command = new SqlCommand(query, con.Connect());
+
+                SqlDataReader dr = command.ExecuteReader();
+                id = dr.GetInt32(1);    
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            return id;
+        }
+
+        public int FindDepartament(String name)
+        {
+            int id = -1;
+            try
+            {
+                String query = "SELECT departament_id FROM departaments WHERE name = '" + name + "'";
+                SqlCommand command = new SqlCommand(query, con.Connect());
+
+                SqlDataReader dr = command.ExecuteReader();
+                id = dr.GetInt32(1);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            return id;
+        }
+
     }
 }

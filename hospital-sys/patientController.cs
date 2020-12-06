@@ -19,7 +19,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "select * from  patients";
+                command.CommandText = "select patient_name as Nombre,gender as Genero,dni as DNI ,grade as Grado , sit_admin as Sit_admin,state_pml as State_Pml,arma as Arma,guarnicion as Guarnicion , categories.name as Categoria from patients INNER JOIN categories ON patients.category_id = categories.category_id";
                 SqlDataReader dr = command.ExecuteReader();
                 tabla.Load(dr);
 
@@ -38,7 +38,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "INSERT INTO patients VALUES ('" + patient.Name + "','" + patient.Last_name + "','" + patient.Gender + "'," + patient.Dni + ",'" + patient.Grade + "','" + patient.Sit_admin + "','" + patient.State_pml + "','" + patient.Arma + "','" + patient.Guarnicion + "'," + patient.Category + ")";
+                command.CommandText = "INSERT INTO patients VALUES ('" + patient.Name + "','" + patient.Last_name + "','" + patient.Gender + "'," + patient.Dni + "','" + patient.Grade + "','" + patient.Sit_admin + "','" + patient.State_pml + "','" + patient.Arma + "','" + patient.Guarnicion + "'," + patient.Category + ")";
                 command.Prepare();
                 command.ExecuteNonQuery();
                 register = true;
@@ -57,7 +57,7 @@ namespace hospital_sys
             try
             {
                 SqlCommand command = new SqlCommand(null, con.Connect());
-                command.CommandText = "UPDATE    patients SET(patient_name ='" + patient.Name + "',last_name = '" + patient.Last_name + "',gender ='" + patient.Gender + "',dni= " + patient.Dni + ", grade =" + patient.Grade + ", sit_admin =" + patient.Sit_admin+ ", state_pml =" + patient.State_pml+ ", arma =" + patient.Arma+ ", guarnicion=" + patient.Guarnicion + ", cetegory_id =" + patient.Category + " WHERE patient_id = " + patient.Id + ")";
+                command.CommandText = "UPDATE    patients SET patient_name ='" + patient.Name + "',last_name = '" + patient.Last_name + "',gender ='" + patient.Gender + "',dni= " + patient.Dni + ", grade =" + patient.Grade + ", sit_admin =" + patient.Sit_admin+ ", state_pml =" + patient.State_pml+ ", arma =" + patient.Arma+ ", guarnicion=" + patient.Guarnicion + ", cetegory_id =" + patient.Category + " WHERE patient_id = " + patient.Id + "";
                 command.Prepare();
                 command.ExecuteNonQuery();
                 success = true;
@@ -114,5 +114,25 @@ namespace hospital_sys
             }
             return patient;
         }
+
+        public DataTable searchPatients(String name)
+        {
+            List<userModel> users = new List<userModel>();
+            DataTable tabla = new DataTable();
+            try
+            {
+                SqlCommand command = new SqlCommand(null, con.Connect());
+                command.CommandText = "select * from  patients WHERE patient_name LIKE \"%'" + name + "'%\"";
+                SqlDataReader dr = command.ExecuteReader();
+                tabla.Load(dr);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            return tabla;
+        } 
     }
 }

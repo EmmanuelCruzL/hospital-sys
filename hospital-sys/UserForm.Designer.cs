@@ -46,6 +46,7 @@
             this.cmbDepartaments = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btmClean = new System.Windows.Forms.Button();
+            this.lbMode = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtName
@@ -169,6 +170,7 @@
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(121, 21);
             this.cmbTipo.TabIndex = 16;
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
             // 
             // cmbSpecialties
             // 
@@ -177,6 +179,7 @@
             this.cmbSpecialties.Name = "cmbSpecialties";
             this.cmbSpecialties.Size = new System.Drawing.Size(121, 21);
             this.cmbSpecialties.TabIndex = 18;
+            this.cmbSpecialties.SelectedIndexChanged += new System.EventHandler(this.cmbSpecialties_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -195,6 +198,7 @@
             this.cmbDepartaments.Name = "cmbDepartaments";
             this.cmbDepartaments.Size = new System.Drawing.Size(121, 21);
             this.cmbDepartaments.TabIndex = 20;
+            this.cmbDepartaments.SelectedIndexChanged += new System.EventHandler(this.cmbDepartaments_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -217,11 +221,22 @@
             this.btmClean.UseVisualStyleBackColor = true;
             this.btmClean.Click += new System.EventHandler(this.btmClean_Click);
             // 
+            // lbMode
+            // 
+            this.lbMode.AutoSize = true;
+            this.lbMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMode.Location = new System.Drawing.Point(88, 9);
+            this.lbMode.Name = "lbMode";
+            this.lbMode.Size = new System.Drawing.Size(145, 20);
+            this.lbMode.TabIndex = 22;
+            this.lbMode.Text = "NUEVO USUARIO";
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 372);
+            this.Controls.Add(this.lbMode);
             this.Controls.Add(this.btmClean);
             this.Controls.Add(this.cmbDepartaments);
             this.Controls.Add(this.label7);
@@ -266,5 +281,6 @@
         private System.Windows.Forms.ComboBox cmbDepartaments;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btmClean;
+        private System.Windows.Forms.Label lbMode;
     }
 }

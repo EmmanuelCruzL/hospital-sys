@@ -53,5 +53,10 @@ namespace hospital_sys
             Descansos_Medicos frm = new Descansos_Medicos(5);
             frm.Show();
         }
+
+        private void PanelGeneral_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
