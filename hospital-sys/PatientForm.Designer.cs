@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtApp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtGenero = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtGenero = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtName
@@ -86,13 +86,6 @@
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Apellido";
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.Location = new System.Drawing.Point(133, 123);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(180, 20);
-            this.txtGenero.TabIndex = 9;
             // 
             // label3
             // 
@@ -254,11 +247,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txtGenero
+            // 
+            this.txtGenero.FormattingEnabled = true;
+            this.txtGenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.txtGenero.Location = new System.Drawing.Point(133, 123);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(180, 21);
+            this.txtGenero.TabIndex = 27;
+            // 
             // PatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 560);
+            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSave);
@@ -276,7 +281,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDni);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApp);
             this.Controls.Add(this.label1);
@@ -284,6 +288,7 @@
             this.Controls.Add(this.label2);
             this.Name = "PatientForm";
             this.Text = "PatientForm";
+            this.Load += new System.EventHandler(this.PatientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +300,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtApp;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label4;
@@ -314,5 +318,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox txtGenero;
     }
 }

@@ -10,42 +10,44 @@ using System.Windows.Forms;
 
 namespace hospital_sys
 {
-    public partial class Form2 : Form
+    public partial class SignIn : Form
     {
-        public Form2()
+        public SignIn()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            userModel user = new userModel();
-            
-            user.Name = txtUser.Text;
-            user.Password = txtPwd.Text;
+            User user = new User
+            {
+                Name = txtUser.Text,
+                Password = txtPwd.Text
+            };
             try
             {
                 loginController login = new loginController();
-                bool logins = login.login(user);
-                
-                if (logins )
-                {
-                    MessageBox.Show("Conexion Exitosa");
-                    PanelGeneral frmGeneral = new PanelGeneral();
+                user = login.login(user);
+                if (user!=null)
+                {                    
+                    PanelGeneral frmGeneral = new PanelGeneral(user);
                     this.Hide();
                     frmGeneral.Show();
-
                 }
                 else
                 {
-                    MessageBox.Show("Error usuario y constraseña");
+                    MessageBox.Show("Usuario/Contraseña incorrecta.\nVuelve a intentarlo.");
                 }
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.ToString()); 
-               
+                MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

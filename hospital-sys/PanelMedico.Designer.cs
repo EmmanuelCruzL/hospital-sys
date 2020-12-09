@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PACIENTES = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pacienteT = new System.Windows.Forms.DataGridView();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.btnNuevoPaciente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -106,6 +109,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.PACIENTES.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteT)).BeginInit();
@@ -116,62 +120,107 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.userPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosT)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.PACIENTES);
             this.tabControl1.Controls.Add(this.descansos);
             this.tabControl1.Controls.Add(this.notificaciones);
             this.tabControl1.Controls.Add(this.userPage);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(-1, 42);
+            this.tabControl1.Location = new System.Drawing.Point(8, 66);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1011, 514);
+            this.tabControl1.Size = new System.Drawing.Size(1041, 382);
             this.tabControl1.TabIndex = 0;
             // 
             // PACIENTES
             // 
+            this.PACIENTES.Controls.Add(this.button5);
             this.PACIENTES.Controls.Add(this.txtSearch);
             this.PACIENTES.Controls.Add(this.pacienteT);
             this.PACIENTES.Controls.Add(this.button8);
             this.PACIENTES.Controls.Add(this.button7);
-            this.PACIENTES.Controls.Add(this.button6);
             this.PACIENTES.Controls.Add(this.btnNuevoPaciente);
             this.PACIENTES.Controls.Add(this.groupBox1);
             this.PACIENTES.Location = new System.Drawing.Point(4, 22);
             this.PACIENTES.Name = "PACIENTES";
             this.PACIENTES.Padding = new System.Windows.Forms.Padding(3);
-            this.PACIENTES.Size = new System.Drawing.Size(1003, 488);
+            this.PACIENTES.Size = new System.Drawing.Size(1033, 356);
             this.PACIENTES.TabIndex = 1;
             this.PACIENTES.Text = "Pacientes";
             this.PACIENTES.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(912, 21);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(89, 39);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "Eliminar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(117, 127);
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(107, 21);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(220, 20);
+            this.txtSearch.Size = new System.Drawing.Size(391, 30);
             this.txtSearch.TabIndex = 13;
             // 
             // pacienteT
             // 
             this.pacienteT.AllowUserToOrderColumns = true;
+            this.pacienteT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pacienteT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.pacienteT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pacienteT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.pacienteT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pacienteT.Location = new System.Drawing.Point(0, 160);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.pacienteT.DefaultCellStyle = dataGridViewCellStyle2;
+            this.pacienteT.Location = new System.Drawing.Point(9, 79);
+            this.pacienteT.MultiSelect = false;
             this.pacienteT.Name = "pacienteT";
-            this.pacienteT.Size = new System.Drawing.Size(1001, 420);
+            this.pacienteT.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pacienteT.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.pacienteT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.pacienteT.Size = new System.Drawing.Size(992, 271);
             this.pacienteT.TabIndex = 21;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(6, 117);
+            this.button8.Location = new System.Drawing.Point(15, 18);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(89, 39);
+            this.button8.Size = new System.Drawing.Size(86, 33);
             this.button8.TabIndex = 4;
             this.button8.Text = "Buscar";
             this.button8.UseVisualStyleBackColor = true;
@@ -179,22 +228,13 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(722, 75);
+            this.button7.Location = new System.Drawing.Point(817, 21);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 39);
             this.button7.TabIndex = 3;
             this.button7.Text = "Modificar";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(844, 20);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 39);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Guardar";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // btnNuevoPaciente
             // 
@@ -220,9 +260,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(9, 6);
+            this.groupBox1.Location = new System.Drawing.Point(722, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(696, 105);
+            this.groupBox1.Size = new System.Drawing.Size(279, 35);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -343,7 +383,7 @@
             this.descansos.Location = new System.Drawing.Point(4, 22);
             this.descansos.Name = "descansos";
             this.descansos.Padding = new System.Windows.Forms.Padding(3);
-            this.descansos.Size = new System.Drawing.Size(1003, 488);
+            this.descansos.Size = new System.Drawing.Size(1033, 356);
             this.descansos.TabIndex = 0;
             this.descansos.Text = "Notificaciones";
             this.descansos.UseVisualStyleBackColor = true;
@@ -516,7 +556,7 @@
             this.notificaciones.Location = new System.Drawing.Point(4, 22);
             this.notificaciones.Name = "notificaciones";
             this.notificaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.notificaciones.Size = new System.Drawing.Size(1003, 488);
+            this.notificaciones.Size = new System.Drawing.Size(1033, 356);
             this.notificaciones.TabIndex = 2;
             this.notificaciones.Text = "Descansos medicos";
             this.notificaciones.UseVisualStyleBackColor = true;
@@ -704,7 +744,7 @@
             this.userPage.Location = new System.Drawing.Point(4, 22);
             this.userPage.Name = "userPage";
             this.userPage.Padding = new System.Windows.Forms.Padding(3);
-            this.userPage.Size = new System.Drawing.Size(1003, 488);
+            this.userPage.Size = new System.Drawing.Size(1033, 356);
             this.userPage.TabIndex = 3;
             this.userPage.Text = "Usuarios";
             this.userPage.UseVisualStyleBackColor = true;
@@ -752,6 +792,8 @@
             // UsuariosT
             // 
             this.UsuariosT.AllowUserToOrderColumns = true;
+            this.UsuariosT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuariosT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UsuariosT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.UsuariosT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -760,7 +802,7 @@
             this.UsuariosT.Name = "UsuariosT";
             this.UsuariosT.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.UsuariosT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UsuariosT.Size = new System.Drawing.Size(1000, 439);
+            this.UsuariosT.Size = new System.Drawing.Size(1025, 439);
             this.UsuariosT.TabIndex = 0;
             this.UsuariosT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -769,7 +811,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1003, 488);
+            this.tabPage2.Size = new System.Drawing.Size(1033, 356);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Reportes";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -779,7 +821,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1003, 488);
+            this.tabPage3.Size = new System.Drawing.Size(1033, 356);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Auditoria";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -788,19 +830,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(4, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "Usuario:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // userText
             // 
-            this.userText.Location = new System.Drawing.Point(90, 16);
+            this.userText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userText.Location = new System.Drawing.Point(72, 34);
             this.userText.Name = "userText";
             this.userText.ReadOnly = true;
-            this.userText.Size = new System.Drawing.Size(100, 20);
+            this.userText.Size = new System.Drawing.Size(307, 23);
             this.userText.TabIndex = 2;
             // 
             // button1
@@ -824,25 +867,35 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(382, 13);
+            this.label3.Size = new System.Drawing.Size(627, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "ACTA DE  JUNTA MÉDICA-COMPAÑIA :HOSPITAL MILITAR CENTRAL 2020";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.userText);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1049, 460);
+            this.panel1.TabIndex = 6;
             // 
             // Descansos_Medicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 554);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1049, 460);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.userText);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControl1);
             this.Name = "Descansos_Medicos";
-            this.Text = "Descansos_Medicos";
+            this.Text = "Panel Médico";
             this.Load += new System.EventHandler(this.Descansos_Medicos_Load);
             this.tabControl1.ResumeLayout(false);
             this.PACIENTES.ResumeLayout(false);
@@ -859,6 +912,8 @@
             this.userPage.ResumeLayout(false);
             this.userPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosT)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -896,7 +951,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnNuevoPaciente;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
@@ -944,5 +998,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button5;
     }
 }

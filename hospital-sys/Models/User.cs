@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospital_sys
 {
-   public class userModel
+   public class User
     {
         private int id;
         private String name;
@@ -16,6 +16,20 @@ namespace hospital_sys
         private int user_type;
         private int specialty;
         private int departament;
+
+        public User(int id, string name, string last_name, string password, int status, int user_type, int specialty, int departament)
+        {
+            this.id = id;
+            this.name = name;
+            this.last_name = last_name;
+            this.password = password;
+            this.status = status;
+            this.user_type = user_type;
+            this.specialty = specialty;
+            this.departament = departament;
+        }
+
+        public User() { }
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospital_sys
 {
-  public  class loginModel
+  public  class LoginModel
     {
         private int  id;
         private String name;

@@ -12,15 +12,15 @@ namespace hospital_sys
 {
     public partial class UserForm : Form
     {
-        userController userC = new userController();
-        userModel user = new userModel(); 
+        UserController userC = new UserController();
+        User user = new User(); 
         int edit = 0;
         public UserForm()
         {
             InitializeComponent();
             cargarDepartaments();
         }
-        public UserForm(userModel user)
+        public UserForm(User user)
         {
             
             InitializeComponent();
@@ -124,16 +124,19 @@ namespace hospital_sys
             return option;
         } 
 
-        void editMode(userModel user) 
+        void editMode(User user) 
         {
             txtName.Text = user.Name;
             txtApellido.Text = user.Last_name;
             txtClave.Text = user.Password;
             cmbTipo.SelectedIndex = user.User_type;
-            cmbSpecialties.SelectedValue = user.Specialty;
-            MessageBox.Show("" +user.Specialty);
-            cmbDepartaments.SelectedValue = user.Departament;
-            MessageBox.Show(""+user.Departament);
+            cmbSpecialties.SelectedValue = user.Specialty;            
+            cmbDepartaments.SelectedValue = user.Departament;            
+        }
+
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

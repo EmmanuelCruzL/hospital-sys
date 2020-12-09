@@ -37,7 +37,8 @@
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.mainActions = new System.Windows.Forms.Panel();
+            this.mainActions.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -46,23 +47,25 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
+            this.label1.Size = new System.Drawing.Size(108, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "USUARIO";
+            this.label1.Text = "USUARIO:";
             // 
             // UserPanel
             // 
-            this.UserPanel.Location = new System.Drawing.Point(111, 13);
+            this.UserPanel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UserPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserPanel.Location = new System.Drawing.Point(120, 13);
             this.UserPanel.Name = "UserPanel";
             this.UserPanel.ReadOnly = true;
-            this.UserPanel.Size = new System.Drawing.Size(100, 20);
+            this.UserPanel.Size = new System.Drawing.Size(229, 23);
             this.UserPanel.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 76);
+            this.label2.Location = new System.Drawing.Point(36, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(727, 42);
             this.label2.TabIndex = 2;
@@ -70,17 +73,17 @@
             // 
             // txtPaciente
             // 
-            this.txtPaciente.Location = new System.Drawing.Point(95, 155);
+            this.txtPaciente.Location = new System.Drawing.Point(29, 86);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(148, 84);
             this.txtPaciente.TabIndex = 3;
-            this.txtPaciente.Text = "Pacientes";
+            this.txtPaciente.Text = "PACIENTES";
             this.txtPaciente.UseVisualStyleBackColor = true;
             this.txtPaciente.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDescanso
             // 
-            this.btnDescanso.Location = new System.Drawing.Point(95, 263);
+            this.btnDescanso.Location = new System.Drawing.Point(473, 86);
             this.btnDescanso.Name = "btnDescanso";
             this.btnDescanso.Size = new System.Drawing.Size(148, 84);
             this.btnDescanso.TabIndex = 4;
@@ -90,7 +93,7 @@
             // 
             // btnNotify
             // 
-            this.btnNotify.Location = new System.Drawing.Point(425, 155);
+            this.btnNotify.Location = new System.Drawing.Point(342, 86);
             this.btnNotify.Name = "btnNotify";
             this.btnNotify.Size = new System.Drawing.Size(125, 84);
             this.btnNotify.TabIndex = 5;
@@ -100,7 +103,7 @@
             // 
             // btnUsuario
             // 
-            this.btnUsuario.Location = new System.Drawing.Point(251, 155);
+            this.btnUsuario.Location = new System.Drawing.Point(185, 86);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(148, 82);
             this.btnUsuario.TabIndex = 6;
@@ -110,7 +113,7 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(251, 263);
+            this.btnReportes.Location = new System.Drawing.Point(627, 86);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(148, 82);
             this.btnReportes.TabIndex = 7;
@@ -120,40 +123,42 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(823, 8);
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Location = new System.Drawing.Point(985, 16);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(49, 25);
             this.button6.TabIndex = 8;
-            this.button6.Text = "EXIT";
+            this.button6.Text = "Salir";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label3
+            // mainActions
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(788, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Salir";
+            this.mainActions.Controls.Add(this.btnReportes);
+            this.mainActions.Controls.Add(this.txtPaciente);
+            this.mainActions.Controls.Add(this.label2);
+            this.mainActions.Controls.Add(this.btnDescanso);
+            this.mainActions.Controls.Add(this.btnUsuario);
+            this.mainActions.Controls.Add(this.btnNotify);
+            this.mainActions.Location = new System.Drawing.Point(93, 113);
+            this.mainActions.Name = "mainActions";
+            this.mainActions.Size = new System.Drawing.Size(815, 196);
+            this.mainActions.TabIndex = 9;
             // 
             // PanelGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 507);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1058, 507);
+            this.Controls.Add(this.mainActions);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.btnReportes);
-            this.Controls.Add(this.btnUsuario);
-            this.Controls.Add(this.btnNotify);
-            this.Controls.Add(this.btnDescanso);
-            this.Controls.Add(this.txtPaciente);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.label1);
             this.Name = "PanelGeneral";
             this.Text = "PanelGeneral";
             this.Load += new System.EventHandler(this.PanelGeneral_Load);
+            this.mainActions.ResumeLayout(false);
+            this.mainActions.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +175,6 @@
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel mainActions;
     }
 }

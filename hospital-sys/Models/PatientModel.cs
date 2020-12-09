@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hospital_sys
 {
-    class patientModel
+    public class PatientModel
     {
         private int id;
         private String name;
@@ -19,7 +19,12 @@ namespace hospital_sys
         private String arma;
         private String guarnicion;
         private int category;
+        private int genderId;
+        private String created;
+        private String catetegoryValue;
 
+
+        public int GenderId { get => genderId; set => genderId = value; }
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Last_name { get => last_name; set => last_name = value; }
@@ -31,5 +36,7 @@ namespace hospital_sys
         public string Arma { get => arma; set => arma = value; }
         public string Guarnicion { get => guarnicion; set => guarnicion = value; }
         public int Category { get => category; set => category = value; }
+        public string Created { get => created; set => created = value; }
+        public string CatetegoryValue { get => catetegoryValue; set => catetegoryValue = value; }
     }
 }

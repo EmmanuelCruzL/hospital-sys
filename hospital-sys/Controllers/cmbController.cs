@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hospital_sys.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,21 +9,19 @@ using System.Threading.Tasks;
 
 namespace hospital_sys
 {
-    class cmbController
+    class cmbController: CoreController
     {
-        Conexion con = new Conexion();
+        
         public DataTable getDepartaments()
         {
             
             DataTable tabla = new DataTable();
             try
-            {   
-                String query  = "SELECT * FROM departaments";
-                SqlCommand command = new SqlCommand(query, con.Connect());
-                
+            {                   
+                SqlCommand command = this.prepareCommand("SELECT * FROM departaments");
                 SqlDataAdapter da = new SqlDataAdapter(command);
                 da.Fill(tabla);
-
+                disposeCommand(command);
             }
             catch (Exception ex)
             {
@@ -34,16 +33,13 @@ namespace hospital_sys
 
         public DataTable getSpecialties()
         {
-
             DataTable tabla = new DataTable();
             try
-            {
-                String query = "SELECT * FROM specialties";
-                SqlCommand command = new SqlCommand(query, con.Connect());
-
+            {                
+                SqlCommand command = this.prepareCommand("SELECT * FROM specialties");
                 SqlDataAdapter da = new SqlDataAdapter(command);
                 da.Fill(tabla);
-
+                disposeCommand(command);
             }
             catch (Exception ex)
             {
@@ -58,18 +54,15 @@ namespace hospital_sys
 
             DataTable tabla = new DataTable();
             try
-            {
-                String query = "SELECT * FROM categories";
-                SqlCommand command = new SqlCommand(query, con.Connect());
-
+            {                
+                SqlCommand command = this.prepareCommand("SELECT * FROM categories");                
                 SqlDataAdapter da = new SqlDataAdapter(command);
                 da.Fill(tabla);
-
+                disposeCommand(command);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-
             }
             return tabla;
         }
@@ -80,12 +73,12 @@ namespace hospital_sys
             int id =-1;
             try
             {
-                String query = "SELECT specialty_id FROM specialties WHERE name = '" + name+"'" ;
-                SqlCommand command = new SqlCommand(query, con.Connect());
-
+                SqlCommand command = this.prepareCommand("SELECT specialty_id FROM specialties WHERE name = '" + name + "'");                
                 SqlDataReader dr = command.ExecuteReader();
-                id = dr.GetInt32(1);    
-
+                if (dr.Read()) {
+                    id = dr.GetInt32(0);
+                }
+                disposeCommand(command);
             }
             catch (Exception ex)
             {
@@ -101,11 +94,13 @@ namespace hospital_sys
             try
             {
                 String query = "SELECT departament_id FROM departaments WHERE name = '" + name + "'";
-                SqlCommand command = new SqlCommand(query, con.Connect());
-
+                Console.WriteLine(query);
+                SqlCommand command = this.prepareCommand(query);                
                 SqlDataReader dr = command.ExecuteReader();
-                id = dr.GetInt32(1);
-
+                if (dr.Read()) {
+                    id = dr.GetInt32(0);
+                }
+                disposeCommand(command);
             }
             catch (Exception ex)
             {

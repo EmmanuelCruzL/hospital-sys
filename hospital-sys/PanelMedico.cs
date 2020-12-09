@@ -12,21 +12,17 @@ namespace hospital_sys
 {
     public partial class Descansos_Medicos : Form
     {
-        userController users = new userController();
-        patientController patient = new patientController();
+        User currentUser;
+        UserController users = new UserController();
+        PatientController patient = new PatientController();
         cmbController cmb = new cmbController();
-        public Descansos_Medicos(int page)
+        public Descansos_Medicos(int page, User current)
         {
             InitializeComponent();
-            CargarDatos();
-            this.tabControl1.SelectedIndex = page;
-           /* userText.Text = user.Name;
-            MessageBox.Show(user.Id.ToString());
-            MessageBox.Show(user.User_type.ToString());
-            if(user.User_type == 1)
-            {
-                this.tabControl1.TabPages.Remove(userPage);
-            //}*/
+            this.currentUser = current;
+            this.userText.Text = $"{this.currentUser.Name} - {Global.userTypes[this.currentUser.User_type]}";
+            dataLoader();
+            this.tabControl1.SelectedIndex = page;           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,9 +47,9 @@ namespace hospital_sys
 
         private void button5_Click(object sender, EventArgs e)
         {
-            PatientForm patient = new PatientForm();
+            PatientForm patient = new PatientForm(1, null);
             patient.ShowDialog();
-            CargarDatos();
+            dataLoader();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -64,8 +60,29 @@ namespace hospital_sys
 
         private void button7_Click(object sender, EventArgs e)
         {
-            PatientForm frmUser = new PatientForm();
-            frmUser.Show();
+
+            if (pacienteT.SelectedRows.Count > 0) {
+                PatientModel p = new PatientModel();
+                p.Id = int.Parse(pacienteT.SelectedRows[0].Cells[0].Value.ToString());
+                p.Name = pacienteT.SelectedRows[0].Cells[1].Value.ToString();
+                p.Last_name = pacienteT.SelectedRows[0].Cells[2].Value.ToString();
+                p.Gender = pacienteT.SelectedRows[0].Cells[3].Value.ToString();
+                p.Dni = pacienteT.SelectedRows[0].Cells[4].Value.ToString();
+                p.Grade = pacienteT.SelectedRows[0].Cells[5].Value.ToString();
+                p.Sit_admin = pacienteT.SelectedRows[0].Cells[6].Value.ToString();
+                p.State_pml = pacienteT.SelectedRows[0].Cells[7].Value.ToString();
+                p.Arma = pacienteT.SelectedRows[0].Cells[8].Value.ToString();
+                p.Guarnicion = pacienteT.SelectedRows[0].Cells[9].Value.ToString();
+                p.CatetegoryValue = pacienteT.SelectedRows[0].Cells[10].Value.ToString();
+
+                PatientForm frmUser = new PatientForm(2,p);
+                frmUser.Show();
+            }
+            else{
+                MessageBox.Show("Selecciona un paciente en la tabla");
+            }
+            dataLoader();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -79,24 +96,17 @@ namespace hospital_sys
 
         }
 
-        public  void CargarDatos()
+        public  void dataLoader()
         {
-            
-          
-
-            
-
-            UsuariosT.DataSource = users.getUsers();
             pacienteT.DataSource = patient.getPatients();
-
-
+            UsuariosT.DataSource = users.getUsers();            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             UserForm frmUser = new UserForm();
             frmUser.ShowDialog();
-            CargarDatos();
+            dataLoader();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -106,7 +116,7 @@ namespace hospital_sys
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            userModel user = new userModel();
+            User user = new User();
             if (UsuariosT.SelectedRows.Count > 0)
             {
                 user.Id = Int32.Parse(UsuariosT.CurrentRow.Cells["ID"].Value.ToString());
@@ -119,13 +129,18 @@ namespace hospital_sys
                 user.Departament = cmb.FindDepartament(UsuariosT.CurrentRow.Cells["Departamento"].Value.ToString());
                 UserForm userForm = new UserForm(user);
                 userForm.ShowDialog();
-                CargarDatos();
+                dataLoader();
             }
 
         }
 
         private void Descansos_Medicos_Load(object sender, EventArgs e)
         {
+            try
+            {
+                pacienteT.Columns[0].Visible = false;
+            }
+            catch { }
 
         }
 
@@ -134,6 +149,36 @@ namespace hospital_sys
             String name = txtSearch.Text;
             pacienteT.DataSource = patient.searchPatients(name);
         }
-        
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            if (pacienteT.SelectedRows.Count > 0)
+            {
+                PatientModel p = new PatientModel();
+                p.Id = int.Parse(pacienteT.SelectedRows[0].Cells[0].Value.ToString());
+                DialogResult dialogResult = MessageBox.Show("¿Seguro de eliminar el registro?", "Atención", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (patient.delUser(p))
+                    {
+                        MessageBox.Show("Eliminado correctamente!");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un paciente en la tabla");
+            }
+            dataLoader();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
