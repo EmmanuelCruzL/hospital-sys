@@ -7,7 +7,7 @@ namespace hospital_sys
 
         private static DBConnection _instance = null;
         private static readonly object _syncObject = new Object();
-        public static String stringConnection = @"Data Source=DESKTOP-8LKBBRH\SQLEXPRESS; Initial Catalog=hospital_sys; integrated security = true;";
+        public static String stringConnection = @"Data Source=DESKTOP-2E6H87O\SQLEXPRESS; Initial Catalog=hospital_sys; integrated security = true;";
         private static SqlConnection conexion = null;
         public static DBConnection Instance
         {

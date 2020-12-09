@@ -124,5 +124,28 @@ namespace hospital_sys
             return user;
         }
 
+        public DataTable searchUsers(String name)
+        {
+
+            DataTable tabla = new DataTable();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DBConnection.stringConnection))
+                {
+                    SqlCommand command = new SqlCommand(null, connection);
+                    command.Connection.Open();
+                    String sql = "select user_id as ID, users.name as Nombre, last_name as Apellidos,user_password as Contraseña, CASE status WHEN 1 THEN 'Activo' WHEN 0 THEN 'Inactivo' END AS Status,  CASE user_type WHEN 1 THEN 'Administrador' WHEN 0 THEN 'Doctor' END as Tipo , specialties.name as Especialidad ,  departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id  WHERE CONCAT(users.name,' ',last_name) LIKE '%admin4%';";
+                    Console.WriteLine(sql);
+                    command.CommandText = sql;
+                    SqlDataReader dr = command.ExecuteReader();
+                    tabla.Load(dr);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return tabla;
+        }
     }
 }

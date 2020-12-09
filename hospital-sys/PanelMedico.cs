@@ -14,6 +14,7 @@ namespace hospital_sys
     {
         User currentUser;
         UserController users = new UserController();
+        
         PatientController patient = new PatientController();
         cmbController cmb = new cmbController();
         public Descansos_Medicos(int page, User current)
@@ -111,7 +112,28 @@ namespace hospital_sys
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (UsuariosT.SelectedRows.Count > 0)
+            {
+                currentUser  = new User();
+                currentUser.Id = int.Parse(UsuariosT.SelectedRows[0].Cells[0].Value.ToString());
+                DialogResult dialogResult = MessageBox.Show("¿Seguro de eliminar el registro?", "Atención", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (users.delUser(currentUser))
+                    {
+                        MessageBox.Show("Eliminado correctamente!");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un paciente en la tabla");
+            }
+            dataLoader();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -179,6 +201,22 @@ namespace hospital_sys
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchU_Click(object sender, EventArgs e)
+        {
+            String name = txtSearchU.Text;
+             UsuariosT.DataSource =users.searchUsers(name);
         }
     }
 }
