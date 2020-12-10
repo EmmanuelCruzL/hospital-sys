@@ -56,7 +56,7 @@ namespace hospital_sys
                 patient.Category = int.Parse(cmbCategoria.SelectedValue.ToString());
                 DateTime localDate = DateTime.Now;
                 patient.Created = localDate.ToString("dd/MM/yyyy HH:mm");
-
+                patient.Unit = txtUnidad.Text;
                 if (patientC.createUser(patient))
                 {
                     MessageBox.Show("Registro Exitoso!!");
@@ -79,6 +79,7 @@ namespace hospital_sys
                 patient.Arma  = txtArma.Text;
                 patient.Guarnicion = txtGuarnicion.Text;
                 patient.Category = int.Parse(cmbCategoria.SelectedValue.ToString());
+                patient.Unit = txtUnidad.Text;
 
                 if (patientC.editUser(patient))
                 {

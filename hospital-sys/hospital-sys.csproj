@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configs\DBConnection.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\cmbController.cs" />
     <Compile Include="Controllers\CoreController.cs" />
     <Compile Include="DescansoForm.cs">
@@ -63,8 +64,11 @@
     </Compile>
     <Compile Include="Configs\Global.cs" />
     <Compile Include="Controllers\loginController.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Models\Specialty.cs" />
     <Compile Include="PatientForm.cs">
       <SubType>Form</SubType>
     </Compile>

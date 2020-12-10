@@ -17,6 +17,7 @@ namespace hospital_sys
         private String sit_admin;
         private String state_pml;
         private String arma;
+        private String unit;
         private String guarnicion;
         private int category;
         private int genderId;
@@ -38,5 +39,6 @@ namespace hospital_sys
         public int Category { get => category; set => category = value; }
         public string Created { get => created; set => created = value; }
         public string CatetegoryValue { get => catetegoryValue; set => catetegoryValue = value; }
+        public string Unit { get => unit; set => unit = value; }
     }
 }

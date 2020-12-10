@@ -1,4 +1,5 @@
 ﻿using hospital_sys.Controllers;
+using hospital_sys.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -68,6 +69,51 @@ namespace hospital_sys
         }
 
 
+        public Category findCategoryByName(String  name)
+        {
+            try
+            {
+                Console.WriteLine("SELECT * FROM categories where name = " + name);
+                SqlCommand command = this.prepareCommand("SELECT * FROM categories where name = '" + name+"'");
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    return new Category(
+                        reader.GetInt32(0),
+                        reader.GetString(1)
+                        );
+                }
+                disposeCommand(command);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return null;
+        }
+
+        public Category findCategoryById(int id)
+        {
+            try
+            {
+                Console.WriteLine("SELECT * FROM categories where category_id = " + id);
+                SqlCommand command = this.prepareCommand("SELECT * FROM categories where category_id = "+id);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read()) {
+                    return new Category(
+                        reader.GetInt32(0),
+                        reader.GetString(1)
+                        );
+                }
+                disposeCommand(command);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return null;
+        }
+
         public  int FindSpeciality(String name)
         {
             int id =-1;
@@ -86,6 +132,30 @@ namespace hospital_sys
 
             }
             return id;
+        }
+
+        public Specialty findSpecialtyById(int id)
+        {            
+            try
+            {
+                Console.WriteLine("SELECT * FROM specialties WHERE specialty_id = " + id + "");
+                SqlCommand command = this.prepareCommand("SELECT * FROM specialties WHERE specialty_id = " + id + "");
+                SqlDataReader dr = command.ExecuteReader();
+                if (dr.Read())
+                {
+                    return new Specialty(
+                            dr.GetInt32(0),
+                            dr.GetString(1)
+                        );
+                }
+                disposeCommand(command);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            return null;
         }
 
         public int FindDepartament(String name)

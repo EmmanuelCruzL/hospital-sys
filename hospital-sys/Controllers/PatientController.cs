@@ -21,7 +21,7 @@ namespace hospital_sys
                     
                     SqlCommand command = new SqlCommand(null,connection);
                     command.Connection.Open();                    
-                    command.CommandText = "select patient_id as id, patient_name as Nombre, last_name as Apellidos, CASE gender WHEN 1 THEN 'Femenino' WHEN 0 THEN 'Masculino' END AS Genero, dni as DNI , grade as Grado , sit_admin as Sit_admin, state_pml as State_Pml, arma as Arma, guarnicion as Guarnicion , categories.name as Categoria, COALESCE (NULLIF (created, ''), SYSDATETIME()) AS Registrado FROM patients INNER JOIN categories ON patients.category_id = categories.category_id;";
+                    command.CommandText = "select patient_id as id, patient_name as Nombre, last_name as Apellidos, CASE gender WHEN 1 THEN 'Femenino' WHEN 0 THEN 'Masculino' END AS Genero, dni as DNI , grade as Grado , sit_admin as Sit_admin, state_pml as State_Pml, arma as Arma, guarnicion as Guarnicion , categories.name as Categoria, COALESCE (NULLIF (created, ''), SYSDATETIME()) AS Registrado, unit as Unidad FROM patients INNER JOIN categories ON patients.category_id = categories.category_id;";
                     SqlDataReader dr = command.ExecuteReader();
                     tabla.Load(dr);
                 }                
@@ -41,7 +41,7 @@ namespace hospital_sys
                 using (SqlConnection connection = new SqlConnection(DBConnection.stringConnection)) {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = "INSERT INTO patients VALUES ('" + patient.Name + "','" + patient.Last_name + "'," + patient.GenderId + ",'" + patient.Dni + "','" + patient.Grade + "','" + patient.Sit_admin + "','" + patient.State_pml + "','" + patient.Arma + "','" + patient.Guarnicion + "'," + patient.Category +", '"+patient.Created+"'"+  ")";
+                    String sql = "INSERT INTO patients VALUES ('" + patient.Name + "','" + patient.Last_name + "'," + patient.GenderId + ",'" + patient.Dni + "','" + patient.Grade + "','" + patient.Sit_admin + "','" + patient.State_pml + "','" + patient.Arma + "','" + patient.Guarnicion + "'," + patient.Category +", '"+patient.Created+"'"+ ", '" + patient.Unit + "'" + ")";
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     command.Prepare();
@@ -66,7 +66,7 @@ namespace hospital_sys
                 {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = "UPDATE    patients SET patient_name ='" + patient.Name + "', last_name = '" + patient.Last_name + "', gender =" + patient.GenderId + ",dni= '" + patient.Dni + "' , grade ='" + patient.Grade + "', sit_admin ='" + patient.Sit_admin + "', state_pml ='" + patient.State_pml + "', arma ='" + patient.Arma + "', guarnicion='" + patient.Guarnicion + "', category_id =" + patient.Category + " WHERE patient_id = " + patient.Id + ";";
+                    String sql = "UPDATE    patients SET patient_name ='" + patient.Name + "', last_name = '" + patient.Last_name + "', gender =" + patient.GenderId + ",dni= '" + patient.Dni + "' , grade ='" + patient.Grade + "', sit_admin ='" + patient.Sit_admin + "', state_pml ='" + patient.State_pml + "', arma ='" + patient.Arma + "', guarnicion='" + patient.Guarnicion + "', category_id =" + patient.Category+ ", unit='"+patient.Unit+"'" + " WHERE patient_id = " + patient.Id + ";";
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     command.Prepare();
@@ -111,7 +111,7 @@ namespace hospital_sys
                 using (SqlConnection connection = new SqlConnection(DBConnection.stringConnection)) {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = "select patient_id as id, patient_name as Nombre, last_name as Apellidos, CASE gender WHEN 1 THEN 'Femenino' WHEN 0 THEN 'Masculino' END AS Genero, dni as DNI , grade as Grado , sit_admin as Sit_admin, state_pml as State_Pml, arma as Arma, guarnicion as Guarnicion , categories.name as Categoria, COALESCE (NULLIF (created, ''), SYSDATETIME()) AS Registrado FROM patients INNER JOIN categories ON patients.category_id = categories.category_id WHERE CONCAT(patient_name,' ',last_name) LIKE '%"+name+"%';";                    
+                    String sql = "select patient_id as id, patient_name as Nombre, last_name as Apellidos, CASE gender WHEN 1 THEN 'Femenino' WHEN 0 THEN 'Masculino' END AS Genero, dni as DNI , grade as Grado , sit_admin as Sit_admin, state_pml as State_Pml, arma as Arma, guarnicion as Guarnicion , categories.name as Categoria, COALESCE (NULLIF (created, ''), SYSDATETIME()) AS Registrado, unit as Unidad FROM patients INNER JOIN categories ON patients.category_id = categories.category_id WHERE CONCAT(patient_name,' ',last_name) LIKE '%"+name+"%';";                    
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     SqlDataReader dr = command.ExecuteReader();

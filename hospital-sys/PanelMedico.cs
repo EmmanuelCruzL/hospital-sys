@@ -76,7 +76,7 @@ namespace hospital_sys
                 p.CatetegoryValue = pacienteT.SelectedRows[0].Cells[10].Value.ToString();
 
                 PatientForm frmUser = new PatientForm(2,p);
-                frmUser.Show();
+                frmUser.ShowDialog();
             }
             else{
                 MessageBox.Show("Selecciona un paciente en la tabla");
@@ -179,6 +179,34 @@ namespace hospital_sys
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            if (pacienteT.SelectedRows.Count > 0)
+            {
+                PatientModel p = new PatientModel();
+                p.Id = int.Parse(pacienteT.SelectedRows[0].Cells[0].Value.ToString());
+                p.Name = pacienteT.SelectedRows[0].Cells[1].Value.ToString();
+                p.Last_name = pacienteT.SelectedRows[0].Cells[2].Value.ToString();
+                p.Gender = pacienteT.SelectedRows[0].Cells[3].Value.ToString();
+                p.Dni = pacienteT.SelectedRows[0].Cells[4].Value.ToString();
+                p.Grade = pacienteT.SelectedRows[0].Cells[5].Value.ToString();
+                p.Sit_admin = pacienteT.SelectedRows[0].Cells[6].Value.ToString();
+                p.State_pml = pacienteT.SelectedRows[0].Cells[7].Value.ToString();
+                p.Arma = pacienteT.SelectedRows[0].Cells[8].Value.ToString();
+                p.Guarnicion = pacienteT.SelectedRows[0].Cells[9].Value.ToString();
+                p.CatetegoryValue = pacienteT.SelectedRows[0].Cells[10].Value.ToString();
+                p.Unit = pacienteT.SelectedRows[0].Cells[11].Value.ToString();
+                FichaMedica userForm = new FichaMedica(p,currentUser);
+                userForm.ShowDialog();
+                dataLoader();
+                this.tabControl1.SelectedIndex = 2;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un paciente");
+            }
         }
     }
 }

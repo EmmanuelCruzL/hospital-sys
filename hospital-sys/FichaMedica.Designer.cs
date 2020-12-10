@@ -31,16 +31,21 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtActasMédicas = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtSpecialty = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSexo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtGuarnicion = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtArma = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtAdmin = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -51,80 +56,80 @@
             this.txtNameApp = new System.Windows.Forms.TextBox();
             this.dA = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtDDescanso = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtDDNI = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.t = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtDCategoria = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtDGuarnicion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtDArma = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDSitAdmin = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtDUnidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDGrado = new System.Windows.Forms.TextBox();
+            this.txtDNombrePaciente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDNAditivo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDEspeciliad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDNumEspecialidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDactasMedicas = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtCurrentDisease = new System.Windows.Forms.RichTextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.txtSupportDiagnostic = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.txtClinicTest = new System.Windows.Forms.RichTextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.txtDiagnosis = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtHistory = new System.Windows.Forms.RichTextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.txtPronostico = new System.Windows.Forms.RichTextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.txtEvolucion = new System.Windows.Forms.RichTextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.txtTratamiento = new System.Windows.Forms.RichTextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.txtSecula = new System.Windows.Forms.RichTextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.txtEtiologia = new System.Windows.Forms.RichTextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtNextDateEVALUTATION = new System.Windows.Forms.DateTimePicker();
+            this.txtMeetingDate = new System.Windows.Forms.DateTimePicker();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.txtGuarnizacionServir = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtTrabajoArealizar = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtTiempoAproximado = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.richTextBox13 = new System.Windows.Forms.RichTextBox();
+            this.txtRelationServiceDisease = new System.Windows.Forms.RichTextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
+            this.txtGradoDependencia = new System.Windows.Forms.RichTextBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.txtMagnitud = new System.Windows.Forms.RichTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
+            this.txtResume = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -180,16 +185,22 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.txtActasMédicas);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.txtSpecialty);
+            this.groupBox2.Controls.Add(this.txtId);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txtDni);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.txtSexo);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.textBox16);
+            this.groupBox2.Controls.Add(this.txtCategoria);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.textBox17);
+            this.groupBox2.Controls.Add(this.txtGuarnicion);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.textBox18);
+            this.groupBox2.Controls.Add(this.txtArma);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.txtAdmin);
             this.groupBox2.Controls.Add(this.label21);
@@ -203,6 +214,45 @@
             this.groupBox2.Size = new System.Drawing.Size(935, 571);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(432, 40);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(67, 13);
+            this.label29.TabIndex = 29;
+            this.label29.Text = "Especialidad";
+            // 
+            // txtActasMédicas
+            // 
+            this.txtActasMédicas.Location = new System.Drawing.Point(263, 33);
+            this.txtActasMédicas.Name = "txtActasMédicas";
+            this.txtActasMédicas.Size = new System.Drawing.Size(100, 20);
+            this.txtActasMédicas.TabIndex = 28;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(111, 36);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(97, 13);
+            this.label28.TabIndex = 26;
+            this.label28.Text = "Nro.Actas Médicas";
+            // 
+            // txtSpecialty
+            // 
+            this.txtSpecialty.Location = new System.Drawing.Point(505, 36);
+            this.txtSpecialty.Name = "txtSpecialty";
+            this.txtSpecialty.Size = new System.Drawing.Size(239, 20);
+            this.txtSpecialty.TabIndex = 27;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(263, 93);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 25;
             // 
             // label15
             // 
@@ -245,12 +295,12 @@
             this.label17.TabIndex = 19;
             this.label17.Text = "Categ. Militar :";
             // 
-            // textBox16
+            // txtCategoria
             // 
-            this.textBox16.Location = new System.Drawing.Point(644, 239);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 20;
+            this.txtCategoria.Location = new System.Drawing.Point(644, 239);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.TabIndex = 20;
             // 
             // label18
             // 
@@ -261,12 +311,12 @@
             this.label18.TabIndex = 17;
             this.label18.Text = "Guarnición :";
             // 
-            // textBox17
+            // txtGuarnicion
             // 
-            this.textBox17.Location = new System.Drawing.Point(644, 192);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 18;
+            this.txtGuarnicion.Location = new System.Drawing.Point(644, 192);
+            this.txtGuarnicion.Name = "txtGuarnicion";
+            this.txtGuarnicion.Size = new System.Drawing.Size(100, 20);
+            this.txtGuarnicion.TabIndex = 18;
             // 
             // label19
             // 
@@ -277,12 +327,12 @@
             this.label19.TabIndex = 15;
             this.label19.Text = "Arma :";
             // 
-            // textBox18
+            // txtArma
             // 
-            this.textBox18.Location = new System.Drawing.Point(644, 144);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 16;
+            this.txtArma.Location = new System.Drawing.Point(644, 144);
+            this.txtArma.Name = "txtArma";
+            this.txtArma.Size = new System.Drawing.Size(100, 20);
+            this.txtArma.TabIndex = 16;
             // 
             // label20
             // 
@@ -335,15 +385,15 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(157, 96);
+            this.label23.Location = new System.Drawing.Point(146, 96);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(95, 13);
+            this.label23.Size = new System.Drawing.Size(58, 13);
             this.label23.TabIndex = 6;
-            this.label23.Text = "Nombre y Apellido ";
+            this.label23.Text = "Nro.Adtvo:";
             // 
             // txtNameApp
             // 
-            this.txtNameApp.Location = new System.Drawing.Point(263, 93);
+            this.txtNameApp.Location = new System.Drawing.Point(450, 96);
             this.txtNameApp.Name = "txtNameApp";
             this.txtNameApp.Size = new System.Drawing.Size(294, 20);
             this.txtNameApp.TabIndex = 7;
@@ -361,33 +411,33 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtDDescanso);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox13);
+            this.groupBox1.Controls.Add(this.txtDDNI);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox12);
+            this.groupBox1.Controls.Add(this.t);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.txtDCategoria);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.txtDGuarnicion);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.txtDArma);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.txtDSitAdmin);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txtDUnidad);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtDGrado);
+            this.groupBox1.Controls.Add(this.txtDNombrePaciente);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtDNAditivo);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtDEspeciliad);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtDNumEspecialidad);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDactasMedicas);
             this.groupBox1.Location = new System.Drawing.Point(0, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(936, 571);
@@ -395,13 +445,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBox1
+            // txtDDescanso
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(652, 393);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 27;
+            this.txtDDescanso.FormattingEnabled = true;
+            this.txtDDescanso.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.txtDDescanso.Location = new System.Drawing.Point(652, 393);
+            this.txtDDescanso.Name = "txtDDescanso";
+            this.txtDDescanso.Size = new System.Drawing.Size(100, 21);
+            this.txtDDescanso.TabIndex = 27;
             // 
             // label13
             // 
@@ -421,12 +474,12 @@
             this.label12.TabIndex = 23;
             this.label12.Text = "D.N.I";
             // 
-            // textBox13
+            // txtDDNI
             // 
-            this.textBox13.Location = new System.Drawing.Point(236, 405);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 24;
+            this.txtDDNI.Location = new System.Drawing.Point(236, 405);
+            this.txtDDNI.Name = "txtDDNI";
+            this.txtDDNI.Size = new System.Drawing.Size(100, 20);
+            this.txtDDNI.TabIndex = 24;
             // 
             // label11
             // 
@@ -437,12 +490,12 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "Sexo :";
             // 
-            // textBox12
+            // t
             // 
-            this.textBox12.Location = new System.Drawing.Point(236, 349);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 22;
+            this.t.Location = new System.Drawing.Point(236, 349);
+            this.t.Name = "t";
+            this.t.Size = new System.Drawing.Size(100, 20);
+            this.t.TabIndex = 22;
             // 
             // label10
             // 
@@ -453,12 +506,12 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Categ. Militar :";
             // 
-            // textBox11
+            // txtDCategoria
             // 
-            this.textBox11.Location = new System.Drawing.Point(652, 332);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 20;
+            this.txtDCategoria.Location = new System.Drawing.Point(652, 332);
+            this.txtDCategoria.Name = "txtDCategoria";
+            this.txtDCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtDCategoria.TabIndex = 20;
             // 
             // label9
             // 
@@ -469,12 +522,12 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Guarnición :";
             // 
-            // textBox10
+            // txtDGuarnicion
             // 
-            this.textBox10.Location = new System.Drawing.Point(652, 285);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 18;
+            this.txtDGuarnicion.Location = new System.Drawing.Point(652, 285);
+            this.txtDGuarnicion.Name = "txtDGuarnicion";
+            this.txtDGuarnicion.Size = new System.Drawing.Size(100, 20);
+            this.txtDGuarnicion.TabIndex = 18;
             // 
             // label8
             // 
@@ -485,12 +538,12 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Arma :";
             // 
-            // textBox9
+            // txtDArma
             // 
-            this.textBox9.Location = new System.Drawing.Point(652, 237);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 16;
+            this.txtDArma.Location = new System.Drawing.Point(652, 237);
+            this.txtDArma.Name = "txtDArma";
+            this.txtDArma.Size = new System.Drawing.Size(100, 20);
+            this.txtDArma.TabIndex = 16;
             // 
             // label7
             // 
@@ -501,12 +554,12 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Sit.Admin";
             // 
-            // textBox8
+            // txtDSitAdmin
             // 
-            this.textBox8.Location = new System.Drawing.Point(236, 287);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 14;
+            this.txtDSitAdmin.Location = new System.Drawing.Point(236, 287);
+            this.txtDSitAdmin.Name = "txtDSitAdmin";
+            this.txtDSitAdmin.Size = new System.Drawing.Size(100, 20);
+            this.txtDSitAdmin.TabIndex = 14;
             // 
             // label6
             // 
@@ -517,12 +570,12 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Unidad :";
             // 
-            // textBox7
+            // txtDUnidad
             // 
-            this.textBox7.Location = new System.Drawing.Point(236, 237);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 12;
+            this.txtDUnidad.Location = new System.Drawing.Point(236, 237);
+            this.txtDUnidad.Name = "txtDUnidad";
+            this.txtDUnidad.Size = new System.Drawing.Size(100, 20);
+            this.txtDUnidad.TabIndex = 12;
             // 
             // label5
             // 
@@ -533,19 +586,19 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Grado";
             // 
-            // textBox6
+            // txtDGrado
             // 
-            this.textBox6.Location = new System.Drawing.Point(236, 188);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 10;
+            this.txtDGrado.Location = new System.Drawing.Point(236, 188);
+            this.txtDGrado.Name = "txtDGrado";
+            this.txtDGrado.Size = new System.Drawing.Size(100, 20);
+            this.txtDGrado.TabIndex = 10;
             // 
-            // textBox5
+            // txtDNombrePaciente
             // 
-            this.textBox5.Location = new System.Drawing.Point(375, 137);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(323, 20);
-            this.textBox5.TabIndex = 8;
+            this.txtDNombrePaciente.Location = new System.Drawing.Point(375, 137);
+            this.txtDNombrePaciente.Name = "txtDNombrePaciente";
+            this.txtDNombrePaciente.Size = new System.Drawing.Size(323, 20);
+            this.txtDNombrePaciente.TabIndex = 8;
             // 
             // label4
             // 
@@ -556,12 +609,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Nro.Adtivo";
             // 
-            // textBox4
+            // txtDNAditivo
             // 
-            this.textBox4.Location = new System.Drawing.Point(236, 137);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtDNAditivo.Location = new System.Drawing.Point(236, 137);
+            this.txtDNAditivo.Name = "txtDNAditivo";
+            this.txtDNAditivo.Size = new System.Drawing.Size(100, 20);
+            this.txtDNAditivo.TabIndex = 7;
             // 
             // label3
             // 
@@ -573,13 +626,13 @@
             this.label3.Text = "Espec.Medica";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox3
+            // txtDEspeciliad
             // 
-            this.textBox3.Location = new System.Drawing.Point(652, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtDEspeciliad.Location = new System.Drawing.Point(652, 78);
+            this.txtDEspeciliad.Name = "txtDEspeciliad";
+            this.txtDEspeciliad.Size = new System.Drawing.Size(169, 20);
+            this.txtDEspeciliad.TabIndex = 5;
+            this.txtDEspeciliad.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label2
             // 
@@ -590,12 +643,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nro.Especi";
             // 
-            // textBox2
+            // txtDNumEspecialidad
             // 
-            this.textBox2.Location = new System.Drawing.Point(419, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtDNumEspecialidad.Location = new System.Drawing.Point(419, 75);
+            this.txtDNumEspecialidad.Name = "txtDNumEspecialidad";
+            this.txtDNumEspecialidad.Size = new System.Drawing.Size(100, 20);
+            this.txtDNumEspecialidad.TabIndex = 3;
             // 
             // label1
             // 
@@ -606,12 +659,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nro. Actas Medicas";
             // 
-            // textBox1
+            // txtDactasMedicas
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtDactasMedicas.Location = new System.Drawing.Point(211, 72);
+            this.txtDactasMedicas.Name = "txtDactasMedicas";
+            this.txtDactasMedicas.Size = new System.Drawing.Size(100, 20);
+            this.txtDactasMedicas.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -631,7 +684,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.richTextBox2);
+            this.groupBox4.Controls.Add(this.txtCurrentDisease);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox4.Location = new System.Drawing.Point(466, 13);
             this.groupBox4.Name = "groupBox4";
@@ -640,18 +693,18 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "b.Enfermedades Actuales";
             // 
-            // richTextBox2
+            // txtCurrentDisease
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(335, 164);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.txtCurrentDisease.Location = new System.Drawing.Point(0, 19);
+            this.txtCurrentDisease.Name = "txtCurrentDisease";
+            this.txtCurrentDisease.Size = new System.Drawing.Size(335, 164);
+            this.txtCurrentDisease.TabIndex = 0;
+            this.txtCurrentDisease.Text = "";
             // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.richTextBox4);
+            this.groupBox6.Controls.Add(this.txtSupportDiagnostic);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox6.Location = new System.Drawing.Point(466, 219);
             this.groupBox6.Name = "groupBox6";
@@ -660,18 +713,18 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "d.Apoyo de Diagnostico";
             // 
-            // richTextBox4
+            // txtSupportDiagnostic
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(335, 164);
-            this.richTextBox4.TabIndex = 0;
-            this.richTextBox4.Text = "";
+            this.txtSupportDiagnostic.Location = new System.Drawing.Point(0, 19);
+            this.txtSupportDiagnostic.Name = "txtSupportDiagnostic";
+            this.txtSupportDiagnostic.Size = new System.Drawing.Size(335, 164);
+            this.txtSupportDiagnostic.TabIndex = 0;
+            this.txtSupportDiagnostic.Text = "";
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.richTextBox3);
+            this.groupBox5.Controls.Add(this.txtClinicTest);
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox5.Location = new System.Drawing.Point(26, 219);
             this.groupBox5.Name = "groupBox5";
@@ -680,18 +733,18 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "c.Examen Clinico";
             // 
-            // richTextBox3
+            // txtClinicTest
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(335, 164);
-            this.richTextBox3.TabIndex = 0;
-            this.richTextBox3.Text = "";
+            this.txtClinicTest.Location = new System.Drawing.Point(0, 19);
+            this.txtClinicTest.Name = "txtClinicTest";
+            this.txtClinicTest.Size = new System.Drawing.Size(335, 164);
+            this.txtClinicTest.TabIndex = 0;
+            this.txtClinicTest.Text = "";
             // 
             // groupBox7
             // 
             this.groupBox7.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox7.Controls.Add(this.richTextBox5);
+            this.groupBox7.Controls.Add(this.txtDiagnosis);
             this.groupBox7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox7.Location = new System.Drawing.Point(26, 431);
             this.groupBox7.Name = "groupBox7";
@@ -700,18 +753,18 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "e.Diagnostico";
             // 
-            // richTextBox5
+            // txtDiagnosis
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(769, 70);
-            this.richTextBox5.TabIndex = 0;
-            this.richTextBox5.Text = "";
+            this.txtDiagnosis.Location = new System.Drawing.Point(0, 19);
+            this.txtDiagnosis.Name = "txtDiagnosis";
+            this.txtDiagnosis.Size = new System.Drawing.Size(769, 70);
+            this.txtDiagnosis.TabIndex = 0;
+            this.txtDiagnosis.Text = "";
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.richTextBox1);
+            this.groupBox3.Controls.Add(this.txtHistory);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox3.Location = new System.Drawing.Point(26, 13);
             this.groupBox3.Name = "groupBox3";
@@ -720,13 +773,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Antecedentes";
             // 
-            // richTextBox1
+            // txtHistory
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(335, 164);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.txtHistory.Location = new System.Drawing.Point(0, 19);
+            this.txtHistory.Name = "txtHistory";
+            this.txtHistory.Size = new System.Drawing.Size(335, 164);
+            this.txtHistory.TabIndex = 0;
+            this.txtHistory.Text = "";
             // 
             // tabPage5
             // 
@@ -746,27 +799,27 @@
             // groupBox11
             // 
             this.groupBox11.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox11.Controls.Add(this.richTextBox9);
+            this.groupBox11.Controls.Add(this.txtPronostico);
             this.groupBox11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox11.Location = new System.Drawing.Point(486, 226);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(336, 192);
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Antecedentes";
+            this.groupBox11.Text = "Pronostico";
             // 
-            // richTextBox9
+            // txtPronostico
             // 
-            this.richTextBox9.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(326, 167);
-            this.richTextBox9.TabIndex = 0;
-            this.richTextBox9.Text = "";
+            this.txtPronostico.Location = new System.Drawing.Point(0, 19);
+            this.txtPronostico.Name = "txtPronostico";
+            this.txtPronostico.Size = new System.Drawing.Size(326, 167);
+            this.txtPronostico.TabIndex = 0;
+            this.txtPronostico.Text = "";
             // 
             // groupBox10
             // 
             this.groupBox10.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox10.Controls.Add(this.richTextBox8);
+            this.groupBox10.Controls.Add(this.txtEvolucion);
             this.groupBox10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox10.Location = new System.Drawing.Point(27, 226);
             this.groupBox10.Name = "groupBox10";
@@ -775,18 +828,18 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "5.Evolucion";
             // 
-            // richTextBox8
+            // txtEvolucion
             // 
-            this.richTextBox8.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(326, 167);
-            this.richTextBox8.TabIndex = 0;
-            this.richTextBox8.Text = "";
+            this.txtEvolucion.Location = new System.Drawing.Point(0, 19);
+            this.txtEvolucion.Name = "txtEvolucion";
+            this.txtEvolucion.Size = new System.Drawing.Size(326, 167);
+            this.txtEvolucion.TabIndex = 0;
+            this.txtEvolucion.Text = "";
             // 
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox9.Controls.Add(this.richTextBox7);
+            this.groupBox9.Controls.Add(this.txtTratamiento);
             this.groupBox9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox9.Location = new System.Drawing.Point(486, 19);
             this.groupBox9.Name = "groupBox9";
@@ -795,38 +848,38 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "4.Tratamiento";
             // 
-            // richTextBox7
+            // txtTratamiento
             // 
-            this.richTextBox7.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(326, 167);
-            this.richTextBox7.TabIndex = 0;
-            this.richTextBox7.Text = "";
+            this.txtTratamiento.Location = new System.Drawing.Point(0, 19);
+            this.txtTratamiento.Name = "txtTratamiento";
+            this.txtTratamiento.Size = new System.Drawing.Size(326, 167);
+            this.txtTratamiento.TabIndex = 0;
+            this.txtTratamiento.Text = "";
             // 
             // groupBox12
             // 
             this.groupBox12.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox12.Controls.Add(this.richTextBox10);
+            this.groupBox12.Controls.Add(this.txtSecula);
             this.groupBox12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox12.Location = new System.Drawing.Point(27, 439);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(795, 114);
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Antecedentes";
+            this.groupBox12.Text = "Secuela";
             // 
-            // richTextBox10
+            // txtSecula
             // 
-            this.richTextBox10.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(789, 87);
-            this.richTextBox10.TabIndex = 0;
-            this.richTextBox10.Text = "";
+            this.txtSecula.Location = new System.Drawing.Point(0, 19);
+            this.txtSecula.Name = "txtSecula";
+            this.txtSecula.Size = new System.Drawing.Size(789, 87);
+            this.txtSecula.TabIndex = 0;
+            this.txtSecula.Text = "";
             // 
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox8.Controls.Add(this.richTextBox6);
+            this.groupBox8.Controls.Add(this.txtEtiologia);
             this.groupBox8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox8.Location = new System.Drawing.Point(27, 19);
             this.groupBox8.Name = "groupBox8";
@@ -835,13 +888,13 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "3.Etiologia";
             // 
-            // richTextBox6
+            // txtEtiologia
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(0, 19);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(326, 167);
-            this.richTextBox6.TabIndex = 0;
-            this.richTextBox6.Text = "";
+            this.txtEtiologia.Location = new System.Drawing.Point(0, 19);
+            this.txtEtiologia.Name = "txtEtiologia";
+            this.txtEtiologia.Size = new System.Drawing.Size(326, 167);
+            this.txtEtiologia.TabIndex = 0;
+            this.txtEtiologia.Text = "";
             // 
             // tabPage6
             // 
@@ -859,15 +912,15 @@
             // groupBox17
             // 
             this.groupBox17.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox17.Controls.Add(this.dateTimePicker2);
-            this.groupBox17.Controls.Add(this.dateTimePicker1);
+            this.groupBox17.Controls.Add(this.txtNextDateEVALUTATION);
+            this.groupBox17.Controls.Add(this.txtMeetingDate);
             this.groupBox17.Controls.Add(this.label27);
             this.groupBox17.Controls.Add(this.label26);
-            this.groupBox17.Controls.Add(this.textBox25);
+            this.groupBox17.Controls.Add(this.txtGuarnizacionServir);
             this.groupBox17.Controls.Add(this.label25);
-            this.groupBox17.Controls.Add(this.textBox24);
+            this.groupBox17.Controls.Add(this.txtTrabajoArealizar);
             this.groupBox17.Controls.Add(this.label24);
-            this.groupBox17.Controls.Add(this.textBox22);
+            this.groupBox17.Controls.Add(this.txtTiempoAproximado);
             this.groupBox17.Controls.Add(this.label14);
             this.groupBox17.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox17.Location = new System.Drawing.Point(28, 303);
@@ -877,19 +930,19 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "10. Recomendaciones Administrativas";
             // 
-            // dateTimePicker2
+            // txtNextDateEVALUTATION
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(277, 179);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(257, 20);
-            this.dateTimePicker2.TabIndex = 11;
+            this.txtNextDateEVALUTATION.Location = new System.Drawing.Point(277, 179);
+            this.txtNextDateEVALUTATION.Name = "txtNextDateEVALUTATION";
+            this.txtNextDateEVALUTATION.Size = new System.Drawing.Size(257, 20);
+            this.txtNextDateEVALUTATION.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // txtMeetingDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(277, 144);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(257, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.txtMeetingDate.Location = new System.Drawing.Point(277, 144);
+            this.txtMeetingDate.Name = "txtMeetingDate";
+            this.txtMeetingDate.Size = new System.Drawing.Size(257, 20);
+            this.txtMeetingDate.TabIndex = 10;
             // 
             // label27
             // 
@@ -909,12 +962,12 @@
             this.label26.TabIndex = 6;
             this.label26.Text = "D.Fecha de primera Junta Medica :";
             // 
-            // textBox25
+            // txtGuarnizacionServir
             // 
-            this.textBox25.Location = new System.Drawing.Point(277, 112);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(391, 20);
-            this.textBox25.TabIndex = 5;
+            this.txtGuarnizacionServir.Location = new System.Drawing.Point(277, 112);
+            this.txtGuarnizacionServir.Name = "txtGuarnizacionServir";
+            this.txtGuarnizacionServir.Size = new System.Drawing.Size(391, 20);
+            this.txtGuarnizacionServir.TabIndex = 5;
             // 
             // label25
             // 
@@ -925,12 +978,12 @@
             this.label25.TabIndex = 4;
             this.label25.Text = "C.Guarnizión en que se puede servir :";
             // 
-            // textBox24
+            // txtTrabajoArealizar
             // 
-            this.textBox24.Location = new System.Drawing.Point(277, 76);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(391, 20);
-            this.textBox24.TabIndex = 3;
+            this.txtTrabajoArealizar.Location = new System.Drawing.Point(277, 76);
+            this.txtTrabajoArealizar.Name = "txtTrabajoArealizar";
+            this.txtTrabajoArealizar.Size = new System.Drawing.Size(391, 20);
+            this.txtTrabajoArealizar.TabIndex = 3;
             // 
             // label24
             // 
@@ -941,13 +994,13 @@
             this.label24.TabIndex = 2;
             this.label24.Text = "B. Clase de trabajo a realizar :  ";
             // 
-            // textBox22
+            // txtTiempoAproximado
             // 
-            this.textBox22.Location = new System.Drawing.Point(277, 34);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(391, 20);
-            this.textBox22.TabIndex = 1;
-            this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
+            this.txtTiempoAproximado.Location = new System.Drawing.Point(277, 34);
+            this.txtTiempoAproximado.Name = "txtTiempoAproximado";
+            this.txtTiempoAproximado.Size = new System.Drawing.Size(391, 20);
+            this.txtTiempoAproximado.TabIndex = 1;
+            this.txtTiempoAproximado.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
             // 
             // label14
             // 
@@ -961,22 +1014,22 @@
             // groupBox16
             // 
             this.groupBox16.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox16.Controls.Add(this.richTextBox13);
+            this.groupBox16.Controls.Add(this.txtRelationServiceDisease);
             this.groupBox16.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox16.Location = new System.Drawing.Point(28, 191);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(891, 73);
+            this.groupBox16.Size = new System.Drawing.Size(891, 92);
             this.groupBox16.TabIndex = 4;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "9. Si la  enfermedad tiene relacion con el servicio";
             // 
-            // richTextBox13
+            // txtRelationServiceDisease
             // 
-            this.richTextBox13.Location = new System.Drawing.Point(9, 19);
-            this.richTextBox13.Name = "richTextBox13";
-            this.richTextBox13.Size = new System.Drawing.Size(865, 38);
-            this.richTextBox13.TabIndex = 0;
-            this.richTextBox13.Text = "";
+            this.txtRelationServiceDisease.Location = new System.Drawing.Point(9, 19);
+            this.txtRelationServiceDisease.Name = "txtRelationServiceDisease";
+            this.txtRelationServiceDisease.Size = new System.Drawing.Size(865, 67);
+            this.txtRelationServiceDisease.TabIndex = 0;
+            this.txtRelationServiceDisease.Text = "";
             // 
             // groupBox13
             // 
@@ -994,7 +1047,7 @@
             // groupBox15
             // 
             this.groupBox15.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox15.Controls.Add(this.richTextBox12);
+            this.groupBox15.Controls.Add(this.txtGradoDependencia);
             this.groupBox15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox15.Location = new System.Drawing.Point(482, 30);
             this.groupBox15.Name = "groupBox15";
@@ -1003,18 +1056,18 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "B. Grado de Dependencia";
             // 
-            // richTextBox12
+            // txtGradoDependencia
             // 
-            this.richTextBox12.Location = new System.Drawing.Point(9, 19);
-            this.richTextBox12.Name = "richTextBox12";
-            this.richTextBox12.Size = new System.Drawing.Size(419, 95);
-            this.richTextBox12.TabIndex = 0;
-            this.richTextBox12.Text = "";
+            this.txtGradoDependencia.Location = new System.Drawing.Point(9, 19);
+            this.txtGradoDependencia.Name = "txtGradoDependencia";
+            this.txtGradoDependencia.Size = new System.Drawing.Size(419, 95);
+            this.txtGradoDependencia.TabIndex = 0;
+            this.txtGradoDependencia.Text = "";
             // 
             // groupBox14
             // 
             this.groupBox14.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox14.Controls.Add(this.richTextBox11);
+            this.groupBox14.Controls.Add(this.txtMagnitud);
             this.groupBox14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox14.Location = new System.Drawing.Point(25, 30);
             this.groupBox14.Name = "groupBox14";
@@ -1023,13 +1076,13 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "A. Magnitud  de la Discapacidad";
             // 
-            // richTextBox11
+            // txtMagnitud
             // 
-            this.richTextBox11.Location = new System.Drawing.Point(9, 19);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(419, 95);
-            this.richTextBox11.TabIndex = 0;
-            this.richTextBox11.Text = "";
+            this.txtMagnitud.Location = new System.Drawing.Point(9, 19);
+            this.txtMagnitud.Name = "txtMagnitud";
+            this.txtMagnitud.Size = new System.Drawing.Size(419, 95);
+            this.txtMagnitud.TabIndex = 0;
+            this.txtMagnitud.Text = "";
             // 
             // tabPage4
             // 
@@ -1057,12 +1110,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(758, 425);
+            this.button2.Location = new System.Drawing.Point(686, 425);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 47);
             this.button2.TabIndex = 6;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -1072,11 +1126,12 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox19
             // 
             this.groupBox19.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox19.Controls.Add(this.richTextBox14);
+            this.groupBox19.Controls.Add(this.txtResume);
             this.groupBox19.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox19.Location = new System.Drawing.Point(6, 28);
             this.groupBox19.Name = "groupBox19";
@@ -1085,13 +1140,13 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Conclusiones";
             // 
-            // richTextBox14
+            // txtResume
             // 
-            this.richTextBox14.Location = new System.Drawing.Point(9, 19);
-            this.richTextBox14.Name = "richTextBox14";
-            this.richTextBox14.Size = new System.Drawing.Size(577, 248);
-            this.richTextBox14.TabIndex = 0;
-            this.richTextBox14.Text = "";
+            this.txtResume.Location = new System.Drawing.Point(9, 19);
+            this.txtResume.Name = "txtResume";
+            this.txtResume.Size = new System.Drawing.Size(577, 248);
+            this.txtResume.TabIndex = 0;
+            this.txtResume.Text = "";
             // 
             // FichaMedica
             // 
@@ -1101,6 +1156,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "FichaMedica";
             this.Text = "FichaMedica";
+            this.Load += new System.EventHandler(this.FichaMedica_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -1140,36 +1196,36 @@
         private System.Windows.Forms.TabPage dA;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDactasMedicas;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDEspeciliad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDNumEspecialidad;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDSitAdmin;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtDUnidad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDGrado;
+        private System.Windows.Forms.TextBox txtDNombrePaciente;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDNAditivo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txtGuarnicion;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtArma;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.Label label21;
@@ -1178,60 +1234,65 @@
         private System.Windows.Forms.TextBox txtGrade;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtNameApp;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txtDDescanso;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtDDNI;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox t;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtDCategoria;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtDGuarnicion;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtDArma;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtHistory;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txtCurrentDisease;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox txtSupportDiagnostic;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox txtClinicTest;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.RichTextBox txtDiagnosis;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.RichTextBox txtPronostico;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.RichTextBox richTextBox8;
+        private System.Windows.Forms.RichTextBox txtEvolucion;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox richTextBox7;
+        private System.Windows.Forms.RichTextBox txtTratamiento;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.RichTextBox richTextBox10;
+        private System.Windows.Forms.RichTextBox txtSecula;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox txtEtiologia;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.RichTextBox richTextBox13;
+        private System.Windows.Forms.RichTextBox txtRelationServiceDisease;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.RichTextBox richTextBox12;
+        private System.Windows.Forms.RichTextBox txtGradoDependencia;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.RichTextBox richTextBox11;
+        private System.Windows.Forms.RichTextBox txtMagnitud;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtTiempoAproximado;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtNextDateEVALUTATION;
+        private System.Windows.Forms.DateTimePicker txtMeetingDate;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox txtGuarnizacionServir;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtTrabajoArealizar;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox18;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.RichTextBox richTextBox14;
+        private System.Windows.Forms.RichTextBox txtResume;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtActasMédicas;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtSpecialty;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

@@ -110,6 +110,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.PACIENTES.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteT)).BeginInit();
@@ -142,6 +143,7 @@
             // 
             // PACIENTES
             // 
+            this.PACIENTES.Controls.Add(this.button6);
             this.PACIENTES.Controls.Add(this.button5);
             this.PACIENTES.Controls.Add(this.txtSearch);
             this.PACIENTES.Controls.Add(this.pacienteT);
@@ -886,6 +888,16 @@
             this.panel1.Size = new System.Drawing.Size(1049, 460);
             this.panel1.TabIndex = 6;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(530, 18);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(89, 39);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Nueva Cita";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
             // Descansos_Medicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1000,5 +1012,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
