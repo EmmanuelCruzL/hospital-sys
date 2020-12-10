@@ -29,7 +29,8 @@ namespace hospital_sys
                 loginController login = new loginController();
                 user = login.login(user);
                 if (user!=null)
-                {                    
+                {
+                    login.log(user);
                     PanelGeneral frmGeneral = new PanelGeneral(user);
                     this.Hide();
                     frmGeneral.Show();

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,7 @@
     <Compile Include="Controllers\cmbController.cs" />
     <Compile Include="Controllers\CoreController.cs" />
     <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\Report.cs" />
     <Compile Include="Controllers\workBreakController.cs" />
     <Compile Include="DescansoForm.cs">
       <SubType>Form</SubType>
@@ -70,6 +72,7 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Models\Series.cs" />
     <Compile Include="Models\Specialty.cs" />
     <Compile Include="Models\workBreakModel.cs" />
     <Compile Include="PatientForm.cs">
@@ -153,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconfinder_profle_1055000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

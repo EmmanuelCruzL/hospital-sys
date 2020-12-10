@@ -52,13 +52,22 @@ namespace hospital_sys
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Descansos_Medicos frm = new Descansos_Medicos(5, this.user);
+            Descansos_Medicos frm = new Descansos_Medicos(4, this.user);
             frm.Show();
         }
 
         private void PanelGeneral_Load(object sender, EventArgs e)
         {
             this.mainActions.Location = new Point(this.Width/2- this.mainActions.Width/2, 250);
+            if (this.user.User_type == 0)
+            {  // is Admin
+                btnUsers.Visible = true;
+                btnReportes.Visible = true;
+            }
+            else {  // is doctor
+                btnUsers.Visible = false;
+                btnReportes.Visible = false;
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)

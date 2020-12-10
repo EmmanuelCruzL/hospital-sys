@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using hospital_sys.Controllers;
 
 namespace hospital_sys
 {
@@ -130,8 +132,8 @@ namespace hospital_sys
         {
             pacienteT.DataSource = patient.getPatients();
             UsuariosT.DataSource = users.getUsers();
-            DescansosT.DataSource = workC.getWorkBreaks();
-            notifyT.DataSource = workC.getWorkBreaks();
+            DescansosT.DataSource = workC.getWorkBreaks(currentUser.Id);
+            notifyT.DataSource = workC.getWorkBreaks(currentUser.Id);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -192,6 +194,9 @@ namespace hospital_sys
             try
             {
                 pacienteT.Columns[0].Visible = false;
+                reportDate.Format = DateTimePickerFormat.Custom;
+                reportDate.CustomFormat = "yyyy";
+                this.geenerarMock();
             }
             catch { }
 
@@ -358,6 +363,125 @@ namespace hospital_sys
             {
                 MessageBox.Show("Seleccion un filtro");
             }
+        }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+            int type = cbmReportype.SelectedIndex;
+            int year = int.Parse(reportDate.Text);
+            Report r = new Report();
+            chart1.Series.Clear();
+            chart1.Titles.Clear();
+            List<Models.Series> datosSeries;
+            if (type == 0)
+            {
+                datosSeries = r.getUserActivity(year);
+                chart1.Series.Add("Activdad de usuarios");
+                chart1.Series[0].ChartType = SeriesChartType.Line;
+                for (int i = 0; i < datosSeries.Count; i++)
+                {
+                    Models.Series serie = datosSeries.ElementAt(i);
+                    int freq = datosSeries.RemoveAll(delegate (Models.Series s)
+                    {
+                        return s.mes == serie.mes;
+                    });
+                    Console.WriteLine(serie.mes +" - "+ freq);
+                    chart1.Series[0].Points.AddXY(serie.mes, freq);
+                }
+                chart1.Titles.Add("Actividad de usuarios");
+            }
+            else if (type == 2)
+            {
+                datosSeries = r.getDoctoresActivity(year);                
+                chart1.Series.Add("Registro de Pacientes");
+                chart1.Series[0].ChartType = SeriesChartType.Line;
+                for (int i = 0; i < datosSeries.Count; i++)
+                {
+                    Models.Series serie = datosSeries.ElementAt(i);
+                    int freq = datosSeries.RemoveAll(delegate (Models.Series s)
+                    {
+                        return s.mes == serie.mes;
+                    });
+                    Console.WriteLine(serie.mes + " - " + freq);
+                    chart1.Series[0].Points.AddXY(serie.mes, freq);
+                }
+                chart1.Titles.Add("Registro de Pacientes");
+            }
+            else if (type == 1)
+            {
+                datosSeries = r.getDoctoresActivity(year);                
+                chart1.Series.Add("Activdad de Doctores");
+                chart1.Series[0].ChartType = SeriesChartType.Line;
+                for (int i = 0; i < datosSeries.Count; i++)
+                {
+                    Models.Series serie = datosSeries.ElementAt(i);
+                    int freq = datosSeries.RemoveAll(delegate (Models.Series s)
+                    {
+                        return s.mes == serie.mes;
+                    });
+                    Console.WriteLine(serie.mes + " - " + freq);
+                    chart1.Series[0].Points.AddXY(serie.mes, freq);
+                }
+                chart1.Titles.Add("Actividad de Doctores");
+
+            }
+            else {
+                this.geenerarMock();
+            }
+        }
+
+        private void geenerarMock()
+        {
+            List<Models.Series> datosSeries = new List<Models.Series>
+        {
+            new Models.Series
+            {
+                mes = "JAN",
+                Serie1 = 29.9m,
+                Serie2 = 144.0m
+            },
+            new Models.Series
+            {
+                mes = "FEB",
+                Serie1 = 71.5m,
+                Serie2 = 176.0m
+            },
+            new Models.Series
+            {
+                mes = "MAR",
+                Serie1 = 106.4m,
+                Serie2 = 135.6m
+            },
+            new Models.Series
+            {
+                mes = "APR",
+                Serie1 = 129.2m,
+                Serie2 = 148.5m
+            },
+            new Models.Series
+            {
+                mes = "MAY",
+                Serie1 = 144.0m,
+                Serie2 = 216.4m
+            },
+            new Models.Series
+            {
+                mes = "JUN",
+                Serie1 = 176.0m,
+                Serie2 = 194.1m
+            },
+        };
+            chart1.Series.Clear();  //Eliminamos cualquier serie del grafico
+            chart1.DataBindTable(datosSeries, "mes"); //Enlazamos nuestra lista al grafico y le indicamos la propiedad que se usara para el eje X
+            chart1.Series[0].ChartType = SeriesChartType.Line; //Tipo de grafico de linea para la serie 1
+            chart1.Series[1].ChartType = SeriesChartType.Line;
+
+
+        }
+
+        private void PACIENTE_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

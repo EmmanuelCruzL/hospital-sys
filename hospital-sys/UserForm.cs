@@ -38,7 +38,7 @@ namespace hospital_sys
         {
             this.user.Name = txtName.Text;
             this.user.Last_name = txtApellido.Text;
-            this.user.Password = txtApellido.Text;
+            this.user.Password = txtClave.Text;
             this.user.Status = typeUser();
             this.user.User_type = cmbTipo.SelectedIndex;
             this.user.Departament = Int32.Parse(cmbDepartaments.SelectedValue.ToString());

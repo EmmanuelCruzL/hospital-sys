@@ -32,7 +32,7 @@
             this.UserPanel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPaciente = new System.Windows.Forms.Button();
-            this.btnDescanso = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.btnNotify = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -81,15 +81,15 @@
             this.txtPaciente.UseVisualStyleBackColor = true;
             this.txtPaciente.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnDescanso
+            // btnUsers
             // 
-            this.btnDescanso.Location = new System.Drawing.Point(473, 86);
-            this.btnDescanso.Name = "btnDescanso";
-            this.btnDescanso.Size = new System.Drawing.Size(148, 84);
-            this.btnDescanso.TabIndex = 4;
-            this.btnDescanso.Text = "USUARIOS";
-            this.btnDescanso.UseVisualStyleBackColor = true;
-            this.btnDescanso.Click += new System.EventHandler(this.button2_Click);
+            this.btnUsers.Location = new System.Drawing.Point(473, 86);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(148, 84);
+            this.btnUsers.TabIndex = 4;
+            this.btnUsers.Text = "USUARIOS";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnNotify
             // 
@@ -124,9 +124,9 @@
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(985, 16);
+            this.button6.Location = new System.Drawing.Point(965, 16);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(49, 25);
+            this.button6.Size = new System.Drawing.Size(69, 41);
             this.button6.TabIndex = 8;
             this.button6.Text = "Salir";
             this.button6.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.mainActions.Controls.Add(this.btnReportes);
             this.mainActions.Controls.Add(this.txtPaciente);
             this.mainActions.Controls.Add(this.label2);
-            this.mainActions.Controls.Add(this.btnDescanso);
+            this.mainActions.Controls.Add(this.btnUsers);
             this.mainActions.Controls.Add(this.btnUsuario);
             this.mainActions.Controls.Add(this.btnNotify);
             this.mainActions.Location = new System.Drawing.Point(93, 113);
@@ -170,7 +170,7 @@
         private System.Windows.Forms.TextBox UserPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button txtPaciente;
-        private System.Windows.Forms.Button btnDescanso;
+        private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnNotify;
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Button btnReportes;

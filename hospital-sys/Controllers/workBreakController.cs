@@ -11,7 +11,7 @@ namespace hospital_sys.Controllers
    public  class workBreakController :Controllers.CoreController
     {
         Models.workBreakModel workModel = new Models.workBreakModel();
-        public DataTable getWorkBreaks()
+        public DataTable getWorkBreaks(int userId)
         {
             DataTable tabla = new DataTable();
             try
@@ -21,7 +21,7 @@ namespace hospital_sys.Controllers
 
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    command.CommandText = "select break_id as Id , patients.patient_name as Nombre,patients.last_name as  Apellido,doc_status Estado_Acta,date_pmi as Fecha_pmi,start_date as Fehca_Inicial,end_date as Fecha_final,situation as Situacion,users.name as Usuario,work_breaks.unit as Unidad   from work_breaks INNER JOIN patients ON work_breaks.patient_id = patients.patient_id INNER JOIN users  ON  work_breaks.user_id = users.user_id ;";
+                    command.CommandText = $"select break_id as Id , patients.patient_name as Nombre,patients.last_name as  Apellido,doc_status Estado_Acta,date_pmi as Fecha_pmi,start_date as Fehca_Inicial,end_date as Fecha_final,situation as Situacion,users.name as Usuario,work_breaks.unit as Unidad   from work_breaks INNER JOIN patients ON work_breaks.patient_id = patients.patient_id INNER JOIN users  ON  work_breaks.user_id = users.user_id where users.user_id = {userId};";
                     SqlDataReader dr = command.ExecuteReader();
                     tabla.Load(dr);
                 }
