@@ -73,14 +73,11 @@ namespace hospital_sys
                 }
             }
             else
-            {
-                
-
+            {                
                 if (workC.CreateWorkBreak(workModel))
                 {
                     MessageBox.Show("Registro Exitoso!!");
                     this.Hide();
-
                 }
                 else
                 {

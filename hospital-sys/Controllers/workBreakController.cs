@@ -43,7 +43,7 @@ namespace hospital_sys.Controllers
                 {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = "INSERT INTO work_breaks VALUES ('" + workModel.Doc_status + "','" + workModel.Diagnostic + "','" + workModel.Date_pmi + "','" + workModel.Start_date + "','" + workModel.End_date + "','" + workModel.Situation + "','" + workModel.Unit + "','" + workModel.User_id + "','" + workModel.Patient_id + "' )";
+                    String sql = "INSERT INTO work_breaks VALUES ('" + workModel.Doc_status + "','" + workModel.Diagnostic + "','" + workModel.Date_pmi + "','" + workModel.Start_date + "','" + workModel.End_date + "','" + workModel.Situation + "','" + workModel.Unit + "','" + workModel.User_id + "','" + workModel.Patient_id + "' )";                    
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     command.Prepare();
