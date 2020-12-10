@@ -50,6 +50,8 @@
     <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\cmbController.cs" />
     <Compile Include="Controllers\CoreController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\workBreakController.cs" />
     <Compile Include="DescansoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +71,7 @@
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Models\Specialty.cs" />
+    <Compile Include="Models\workBreakModel.cs" />
     <Compile Include="PatientForm.cs">
       <SubType>Form</SubType>
     </Compile>

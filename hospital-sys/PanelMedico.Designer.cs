@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PACIENTES = new System.Windows.Forms.TabPage();
+            this.txtDescanso = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pacienteT = new System.Windows.Forms.DataGridView();
@@ -74,29 +76,13 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.PACIENTE = new System.Windows.Forms.Label();
             this.notificaciones = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.n_pmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.na = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado_acta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_pmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_inicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_final = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescansosT = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtPacientes = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.userPage = new System.Windows.Forms.TabPage();
+            this.txtSearchU = new System.Windows.Forms.TextBox();
+            this.btnSearchU = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -110,7 +96,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.PACIENTES.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteT)).BeginInit();
@@ -118,7 +104,7 @@
             this.descansos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.notificaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescansosT)).BeginInit();
             this.userPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosT)).BeginInit();
             this.panel1.SuspendLayout();
@@ -140,9 +126,11 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1041, 382);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // PACIENTES
             // 
+            this.PACIENTES.Controls.Add(this.txtDescanso);
             this.PACIENTES.Controls.Add(this.button6);
             this.PACIENTES.Controls.Add(this.button5);
             this.PACIENTES.Controls.Add(this.txtSearch);
@@ -158,6 +146,26 @@
             this.PACIENTES.TabIndex = 1;
             this.PACIENTES.Text = "Pacientes";
             this.PACIENTES.UseVisualStyleBackColor = true;
+            // 
+            // txtDescanso
+            // 
+            this.txtDescanso.Location = new System.Drawing.Point(627, 21);
+            this.txtDescanso.Name = "txtDescanso";
+            this.txtDescanso.Size = new System.Drawing.Size(89, 39);
+            this.txtDescanso.TabIndex = 23;
+            this.txtDescanso.Text = "Descanso";
+            this.txtDescanso.UseVisualStyleBackColor = true;
+            this.txtDescanso.Click += new System.EventHandler(this.txtDescanso_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(532, 21);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(89, 39);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Nueva Cita";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -176,6 +184,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(391, 30);
             this.txtSearch.TabIndex = 13;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pacienteT
             // 
@@ -185,35 +194,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pacienteT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.pacienteT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.pacienteT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pacienteT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.pacienteT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.pacienteT.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.pacienteT.DefaultCellStyle = dataGridViewCellStyle8;
             this.pacienteT.Location = new System.Drawing.Point(9, 79);
             this.pacienteT.MultiSelect = false;
             this.pacienteT.Name = "pacienteT";
             this.pacienteT.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.pacienteT.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pacienteT.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.pacienteT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.pacienteT.Size = new System.Drawing.Size(992, 271);
             this.pacienteT.TabIndex = 21;
@@ -545,15 +554,10 @@
             // 
             // notificaciones
             // 
-            this.notificaciones.Controls.Add(this.dataGridView2);
-            this.notificaciones.Controls.Add(this.button3);
             this.notificaciones.Controls.Add(this.button2);
-            this.notificaciones.Controls.Add(this.label14);
-            this.notificaciones.Controls.Add(this.button9);
-            this.notificaciones.Controls.Add(this.label12);
-            this.notificaciones.Controls.Add(this.comboBox3);
-            this.notificaciones.Controls.Add(this.comboBox4);
-            this.notificaciones.Controls.Add(this.textBox9);
+            this.notificaciones.Controls.Add(this.DescansosT);
+            this.notificaciones.Controls.Add(this.button3);
+            this.notificaciones.Controls.Add(this.txtPacientes);
             this.notificaciones.Controls.Add(this.label13);
             this.notificaciones.Location = new System.Drawing.Point(4, 22);
             this.notificaciones.Name = "notificaciones";
@@ -563,103 +567,22 @@
             this.notificaciones.Text = "Descansos medicos";
             this.notificaciones.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // DescansosT
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.n_pmi,
-            this.Dep,
-            this.na,
-            this.nombreT,
-            this.Apellido,
-            this.Estado_acta,
-            this.fecha_pmi,
-            this.fecha_inicial,
-            this.fecha_final,
-            this.situacion,
-            this.usuario,
-            this.unidad});
-            this.dataGridView2.Location = new System.Drawing.Point(-4, 72);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1001, 420);
-            this.dataGridView2.TabIndex = 19;
-            // 
-            // n_pmi
-            // 
-            this.n_pmi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.n_pmi.HeaderText = "N°PMI";
-            this.n_pmi.Name = "n_pmi";
-            // 
-            // Dep
-            // 
-            this.Dep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Dep.HeaderText = "Dep.Medico";
-            this.Dep.Name = "Dep";
-            // 
-            // na
-            // 
-            this.na.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.na.HeaderText = "N/A";
-            this.na.Name = "na";
-            // 
-            // nombreT
-            // 
-            this.nombreT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreT.HeaderText = "Nombre";
-            this.nombreT.Name = "nombreT";
-            // 
-            // Apellido
-            // 
-            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            // 
-            // Estado_acta
-            // 
-            this.Estado_acta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Estado_acta.HeaderText = "Estado Acta";
-            this.Estado_acta.Name = "Estado_acta";
-            // 
-            // fecha_pmi
-            // 
-            this.fecha_pmi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha_pmi.HeaderText = "Fecha PMI";
-            this.fecha_pmi.Name = "fecha_pmi";
-            // 
-            // fecha_inicial
-            // 
-            this.fecha_inicial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha_inicial.HeaderText = "Fecha Inicial";
-            this.fecha_inicial.Name = "fecha_inicial";
-            // 
-            // fecha_final
-            // 
-            this.fecha_final.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha_final.HeaderText = "Fecha Final";
-            this.fecha_final.Name = "fecha_final";
-            // 
-            // situacion
-            // 
-            this.situacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.situacion.HeaderText = "Situación";
-            this.situacion.Name = "situacion";
-            // 
-            // usuario
-            // 
-            this.usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            // 
-            // unidad
-            // 
-            this.unidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.unidad.HeaderText = "Unidad";
-            this.unidad.Name = "unidad";
+            this.DescansosT.AllowUserToOrderColumns = true;
+            this.DescansosT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DescansosT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DescansosT.Location = new System.Drawing.Point(-4, 72);
+            this.DescansosT.MultiSelect = false;
+            this.DescansosT.Name = "DescansosT";
+            this.DescansosT.ReadOnly = true;
+            this.DescansosT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DescansosT.Size = new System.Drawing.Size(1001, 278);
+            this.DescansosT.TabIndex = 19;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(767, 24);
+            this.button3.Location = new System.Drawing.Point(899, 18);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 24);
             this.button3.TabIndex = 18;
@@ -667,70 +590,17 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // txtPacientes
             // 
-            this.button2.Location = new System.Drawing.Point(663, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 24);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "NUEVO";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(225, 48);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "MES";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(883, 24);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(98, 24);
-            this.button9.TabIndex = 14;
-            this.button9.Text = "IMPRMIR";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 48);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "ESPECIALIDAD";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(274, 45);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(78, 21);
-            this.comboBox3.TabIndex = 12;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(99, 45);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(101, 21);
-            this.comboBox4.TabIndex = 11;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(87, 12);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 10;
+            this.txtPacientes.Location = new System.Drawing.Point(541, 21);
+            this.txtPacientes.Name = "txtPacientes";
+            this.txtPacientes.Size = new System.Drawing.Size(211, 20);
+            this.txtPacientes.TabIndex = 10;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 12);
+            this.label13.Location = new System.Drawing.Point(443, 24);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 13);
             this.label13.TabIndex = 9;
@@ -738,6 +608,8 @@
             // 
             // userPage
             // 
+            this.userPage.Controls.Add(this.txtSearchU);
+            this.userPage.Controls.Add(this.btnSearchU);
             this.userPage.Controls.Add(this.btnEliminar);
             this.userPage.Controls.Add(this.btnEditar);
             this.userPage.Controls.Add(this.btnNuevo);
@@ -750,6 +622,24 @@
             this.userPage.TabIndex = 3;
             this.userPage.Text = "Usuarios";
             this.userPage.UseVisualStyleBackColor = true;
+            // 
+            // txtSearchU
+            // 
+            this.txtSearchU.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchU.Location = new System.Drawing.Point(103, 30);
+            this.txtSearchU.Name = "txtSearchU";
+            this.txtSearchU.Size = new System.Drawing.Size(391, 30);
+            this.txtSearchU.TabIndex = 15;
+            // 
+            // btnSearchU
+            // 
+            this.btnSearchU.Location = new System.Drawing.Point(11, 27);
+            this.btnSearchU.Name = "btnSearchU";
+            this.btnSearchU.Size = new System.Drawing.Size(86, 33);
+            this.btnSearchU.TabIndex = 14;
+            this.btnSearchU.Text = "Buscar";
+            this.btnSearchU.UseVisualStyleBackColor = true;
+            this.btnSearchU.Click += new System.EventHandler(this.btnSearchU_Click);
             // 
             // btnEliminar
             // 
@@ -799,12 +689,13 @@
             this.UsuariosT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UsuariosT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.UsuariosT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UsuariosT.Location = new System.Drawing.Point(0, 53);
+            this.UsuariosT.Location = new System.Drawing.Point(0, 66);
             this.UsuariosT.MultiSelect = false;
             this.UsuariosT.Name = "UsuariosT";
+            this.UsuariosT.ReadOnly = true;
             this.UsuariosT.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.UsuariosT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UsuariosT.Size = new System.Drawing.Size(1025, 439);
+            this.UsuariosT.Size = new System.Drawing.Size(1025, 290);
             this.UsuariosT.TabIndex = 0;
             this.UsuariosT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -887,16 +778,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1049, 460);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button6
+            // button2
             // 
-            this.button6.Location = new System.Drawing.Point(530, 18);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 39);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "Nueva Cita";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.button2.Location = new System.Drawing.Point(795, 18);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 24);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "BUSCAR";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // Descansos_Medicos
             // 
@@ -920,7 +812,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.notificaciones.ResumeLayout(false);
             this.notificaciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescansosT)).EndInit();
             this.userPage.ResumeLayout(false);
             this.userPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosT)).EndInit();
@@ -965,13 +857,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnNuevoPaciente;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtPacientes;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabPage userPage;
         private System.Windows.Forms.DataGridView pacienteT;
@@ -988,19 +874,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn n_pmi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn na;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado_acta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_pmi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_inicial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_final;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
+        private System.Windows.Forms.DataGridView DescansosT;
         private System.Windows.Forms.DataGridView UsuariosT;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -1013,5 +887,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtSearchU;
+        private System.Windows.Forms.Button btnSearchU;
+        private System.Windows.Forms.Button txtDescanso;
+        private System.Windows.Forms.Button button2;
     }
 }

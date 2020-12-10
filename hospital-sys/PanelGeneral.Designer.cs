@@ -107,7 +107,7 @@
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(148, 82);
             this.btnUsuario.TabIndex = 6;
-            this.btnUsuario.Text = "PANEL MEDICO";
+            this.btnUsuario.Text = "DESCANSOS MEDICOS";
             this.btnUsuario.UseVisualStyleBackColor = true;
             this.btnUsuario.Click += new System.EventHandler(this.button4_Click);
             // 
