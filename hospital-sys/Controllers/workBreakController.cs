@@ -84,7 +84,7 @@ namespace hospital_sys.Controllers
             return success;
         }
 
-        public DataTable searchWorkBreaks(int  month ,int  specialty  )
+        public DataTable SearchWorkBreaks(int  month  )
         {
             DataTable tabla = new DataTable();
             try
@@ -93,7 +93,7 @@ namespace hospital_sys.Controllers
                 {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = "select break_id as Id , patients.patient_name as Nombre,patients.last_name as  Apellido,doc_status Estado_Acta,date_pmi as Fecha_pmi,start_date as Fehca_Inicial,end_date as Fecha_final,situation as Situacion,users.name as Usuario,unit as Unidad   from work_breaks INNER JOIN patients ON work_breaks.patient_id = patients.patient_id INNER JOIN users  ON  work_breaks.user_id = users.user_id WHERE MONTH( date_pmi) = '"+month+"'  AND users.specialty_id = '"+specialty+"';";
+                    String sql = "select break_id as Id , patients.patient_name as Nombre,patients.last_name as  Apellido,doc_status Estado_Acta,date_pmi as Fecha_pmi,start_date as Fehca_Inicial,end_date as Fecha_final,situation as Situacion,users.name as Usuario,work_breaks.unit as Unidad   from work_breaks INNER JOIN patients ON work_breaks.patient_id = patients.patient_id INNER JOIN users  ON  work_breaks.user_id = users.user_id WHERE MONTH( date_pmi) =  " + month+" ";
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     SqlDataReader dr = command.ExecuteReader();
@@ -107,7 +107,8 @@ namespace hospital_sys.Controllers
             return tabla;
         }
 
-        public DataTable searchWorkBreaks(String name)
+
+        public DataTable searchWorkBreaks(String name, int month)
         {
             DataTable tabla = new DataTable();
             try
@@ -116,7 +117,7 @@ namespace hospital_sys.Controllers
                 {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = $"select break_id as Id , patients.patient_name as Nombre,patients.last_name as  Apellido,doc_status Estado_Acta,date_pmi as Fecha_pmi,start_date as Fehca_Inicial,end_date as Fecha_final,situation as Situacion,users.name as Usuario,  work_breaks.unit as Unidad   from work_breaks INNER JOIN patients ON work_breaks.patient_id = patients.patient_id INNER JOIN users  ON  work_breaks.user_id = users.user_id WHERE CONCAT(patients.patient_name,' ',patients.last_name) LIKE  '%{name}%'";
+                    String sql = $"select break_id as Id , patients.patient_name as Nombre,patients.last_name as  Apellido,doc_status Estado_Acta,date_pmi as Fecha_pmi,start_date as Fehca_Inicial,end_date as Fecha_final,situation as Situacion,users.name as Usuario,  work_breaks.unit as Unidad   from work_breaks INNER JOIN patients ON work_breaks.patient_id = patients.patient_id INNER JOIN users  ON  work_breaks.user_id = users.user_id WHERE CONCAT(patients.patient_name,' ',patients.last_name) LIKE  '%{name}%' AND MONTH( date_pmi) = "  + month ;
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     SqlDataReader dr = command.ExecuteReader();

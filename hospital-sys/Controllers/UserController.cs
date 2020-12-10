@@ -137,7 +137,7 @@ namespace hospital_sys
                 {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = "select user_id as ID, users.name as Nombre, last_name as Apellidos,user_password as Contraseña, status AS Estado,   user_type  as Tipo , specialties.name as Especialidad ,  departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id  WHERE CONCAT(users.name,' ',last_name) LIKE '%admin4%';";
+                    String sql = "select user_id as ID, users.name as Nombre, last_name as Apellidos,user_password as Contraseña, users.status AS Estado,   user_type  as Tipo , specialties.name as Especialidad ,  departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id  WHERE CONCAT(users.name,' ',last_name) LIKE '%" + name + "%';";
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     SqlDataReader dr = command.ExecuteReader();

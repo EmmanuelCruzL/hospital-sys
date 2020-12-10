@@ -131,6 +131,7 @@ namespace hospital_sys
             pacienteT.DataSource = patient.getPatients();
             UsuariosT.DataSource = users.getUsers();
             DescansosT.DataSource = workC.getWorkBreaks();
+            notifyT.DataSource = workC.getWorkBreaks();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -156,7 +157,7 @@ namespace hospital_sys
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-
+                    MessageBox.Show("Error al eliminar");
                 }
             }
             else
@@ -314,8 +315,15 @@ namespace hospital_sys
 
         private void button2_Click_2(object sender, EventArgs e)
         {
+           if(cmbMesD.SelectedIndex > 0 && txtPacientesD.Text != "")
+            {
+                DescansosT.DataSource = workC.searchWorkBreaks(txtPacientesD.Text,cmbMesD.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Seleccion un filtro");
+            }
             
-            DescansosT.DataSource = workC.searchWorkBreaks(txtPacientes.Text);
         }
 
         void cargarDepartaments()
@@ -324,6 +332,32 @@ namespace hospital_sys
             //cmbEspeicialidad.DisplayMember = "name";
             //cmbEspeicialidad.ValueMember = "specialty_id";
             //cmbEspeicialidad.DataSource = dc.getSpecialties();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        void loadCmb()
+        {
+            
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchNotify_Click(object sender, EventArgs e)
+        {
+            if (cmbMesN.SelectedIndex > 0 && txtPacienteN.Text != "")
+            {
+                notifyT.DataSource = workC.searchWorkBreaks(txtPacienteN.Text, cmbMesN.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Seleccion un filtro");
+            }
         }
     }
 }
