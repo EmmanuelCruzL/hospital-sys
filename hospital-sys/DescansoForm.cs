@@ -58,9 +58,10 @@ namespace hospital_sys
             workModel.Situation = txtSituation.Text;
             workModel.Unit = 1;
             workModel.User_id = user.Id;
-            //workModel.Patient_id = Patient.Id;
+            
             if (edit)
             {
+                //workModel.Patient_id = Patient.Id;
                 if (workC.EditWorkBreak(workModel))
                 {
                     MessageBox.Show("Actualización Exitosa!!");
@@ -73,7 +74,8 @@ namespace hospital_sys
                 }
             }
             else
-            {                
+            {
+                workModel.Patient_id = Patient.Id;
                 if (workC.CreateWorkBreak(workModel))
                 {
                     MessageBox.Show("Registro Exitoso!!");
