@@ -14,7 +14,7 @@ namespace hospital_sys
     {
         User currentUser;
         UserController users = new UserController();
-        
+        Controllers.workBreakController workC = new Controllers.workBreakController();
         PatientController patient = new PatientController();
         cmbController cmb = new cmbController();
         public Descansos_Medicos(int page, User current)
@@ -55,8 +55,7 @@ namespace hospital_sys
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            DescansoForm frm = new DescansoForm();
-            frm.Show();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -88,8 +87,33 @@ namespace hospital_sys
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UserForm frmUser = new UserForm();
-            frmUser.Show();
+            Models.workBreakModel w = new Models.workBreakModel();
+            PatientModel p = new PatientModel();
+            if (DescansosT.SelectedRows.Count > 0)
+            {
+
+                w.Id = int.Parse(DescansosT.SelectedRows[0].Cells[0].Value.ToString());
+                p.Name = (DescansosT.SelectedRows[0].Cells[1].Value.ToString());
+                p.Last_name = (DescansosT.SelectedRows[0].Cells[2].Value.ToString());
+                w.Doc_status = (DescansosT.SelectedRows[0].Cells[3].Value.ToString());
+                w.Date_pmi = (DescansosT.SelectedRows[0].Cells[4].Value.ToString());
+                w.Start_date = (DescansosT.SelectedRows[0].Cells[5].Value.ToString());
+                w.End_date = (DescansosT.SelectedRows[0].Cells[6].Value.ToString());
+                w.Situation = (DescansosT.SelectedRows[0].Cells[7].Value.ToString());
+                p.Unit = (DescansosT.SelectedRows[0].Cells[9].Value.ToString());
+                
+
+
+                DescansoForm frmDescanso = new DescansoForm(this.currentUser, w,p,true);
+                frmDescanso.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un paciente en la tabla");
+            }
+            dataLoader();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -100,7 +124,8 @@ namespace hospital_sys
         public  void dataLoader()
         {
             pacienteT.DataSource = patient.getPatients();
-            UsuariosT.DataSource = users.getUsers();            
+            UsuariosT.DataSource = users.getUsers();
+            DescansosT.DataSource = workC.getWorkBreaks();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -217,6 +242,46 @@ namespace hospital_sys
         {
             String name = txtSearchU.Text;
              UsuariosT.DataSource =users.searchUsers(name);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtDescanso_Click(object sender, EventArgs e)
+        {
+            
+            
+
+            if (pacienteT.SelectedRows.Count > 0)
+            {
+                PatientModel p = new PatientModel();
+                p.Id = int.Parse(pacienteT.SelectedRows[0].Cells[0].Value.ToString());
+                p.Name = pacienteT.SelectedRows[0].Cells[1].Value.ToString();
+                p.Last_name = pacienteT.SelectedRows[0].Cells[2].Value.ToString();
+                p.Gender = pacienteT.SelectedRows[0].Cells[3].Value.ToString();
+                p.Dni = pacienteT.SelectedRows[0].Cells[4].Value.ToString();
+                p.Grade = pacienteT.SelectedRows[0].Cells[5].Value.ToString();
+                p.Sit_admin = pacienteT.SelectedRows[0].Cells[6].Value.ToString();
+                p.State_pml = pacienteT.SelectedRows[0].Cells[7].Value.ToString();
+                p.Arma = pacienteT.SelectedRows[0].Cells[8].Value.ToString();
+                p.Guarnicion = pacienteT.SelectedRows[0].Cells[9].Value.ToString();
+                p.CatetegoryValue = pacienteT.SelectedRows[0].Cells[10].Value.ToString();
+                p.Unit = pacienteT.SelectedRows[0].Cells[11].Value.ToString();
+
+
+
+                DescansoForm frmDescanso = new DescansoForm(this.currentUser,p);
+                frmDescanso.ShowDialog();
+                
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un paciente en la tabla");
+            }
+            dataLoader();
+
         }
     }
 }

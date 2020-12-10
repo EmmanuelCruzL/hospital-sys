@@ -74,29 +74,18 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.PACIENTE = new System.Windows.Forms.Label();
             this.notificaciones = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.n_pmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.na = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado_acta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_pmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_inicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_final = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescansosT = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
+            this.cmbEspeicialidad = new System.Windows.Forms.ComboBox();
+            this.txtPacientes = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.userPage = new System.Windows.Forms.TabPage();
+            this.txtSearchU = new System.Windows.Forms.TextBox();
+            this.btnSearchU = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -110,8 +99,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearchU = new System.Windows.Forms.TextBox();
-            this.btnSearchU = new System.Windows.Forms.Button();
+            this.txtDescanso = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.PACIENTES.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteT)).BeginInit();
@@ -119,7 +107,7 @@
             this.descansos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.notificaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescansosT)).BeginInit();
             this.userPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosT)).BeginInit();
             this.panel1.SuspendLayout();
@@ -145,6 +133,7 @@
             // 
             // PACIENTES
             // 
+            this.PACIENTES.Controls.Add(this.txtDescanso);
             this.PACIENTES.Controls.Add(this.button5);
             this.PACIENTES.Controls.Add(this.txtSearch);
             this.PACIENTES.Controls.Add(this.pacienteT);
@@ -547,15 +536,14 @@
             // 
             // notificaciones
             // 
-            this.notificaciones.Controls.Add(this.dataGridView2);
+            this.notificaciones.Controls.Add(this.DescansosT);
             this.notificaciones.Controls.Add(this.button3);
-            this.notificaciones.Controls.Add(this.button2);
             this.notificaciones.Controls.Add(this.label14);
             this.notificaciones.Controls.Add(this.button9);
             this.notificaciones.Controls.Add(this.label12);
-            this.notificaciones.Controls.Add(this.comboBox3);
-            this.notificaciones.Controls.Add(this.comboBox4);
-            this.notificaciones.Controls.Add(this.textBox9);
+            this.notificaciones.Controls.Add(this.cmbMes);
+            this.notificaciones.Controls.Add(this.cmbEspeicialidad);
+            this.notificaciones.Controls.Add(this.txtPacientes);
             this.notificaciones.Controls.Add(this.label13);
             this.notificaciones.Location = new System.Drawing.Point(4, 22);
             this.notificaciones.Name = "notificaciones";
@@ -565,99 +553,18 @@
             this.notificaciones.Text = "Descansos medicos";
             this.notificaciones.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // DescansosT
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.n_pmi,
-            this.Dep,
-            this.na,
-            this.nombreT,
-            this.Apellido,
-            this.Estado_acta,
-            this.fecha_pmi,
-            this.fecha_inicial,
-            this.fecha_final,
-            this.situacion,
-            this.usuario,
-            this.unidad});
-            this.dataGridView2.Location = new System.Drawing.Point(-4, 72);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1001, 420);
-            this.dataGridView2.TabIndex = 19;
-            // 
-            // n_pmi
-            // 
-            this.n_pmi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.n_pmi.HeaderText = "N°PMI";
-            this.n_pmi.Name = "n_pmi";
-            // 
-            // Dep
-            // 
-            this.Dep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Dep.HeaderText = "Dep.Medico";
-            this.Dep.Name = "Dep";
-            // 
-            // na
-            // 
-            this.na.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.na.HeaderText = "N/A";
-            this.na.Name = "na";
-            // 
-            // nombreT
-            // 
-            this.nombreT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreT.HeaderText = "Nombre";
-            this.nombreT.Name = "nombreT";
-            // 
-            // Apellido
-            // 
-            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            // 
-            // Estado_acta
-            // 
-            this.Estado_acta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Estado_acta.HeaderText = "Estado Acta";
-            this.Estado_acta.Name = "Estado_acta";
-            // 
-            // fecha_pmi
-            // 
-            this.fecha_pmi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha_pmi.HeaderText = "Fecha PMI";
-            this.fecha_pmi.Name = "fecha_pmi";
-            // 
-            // fecha_inicial
-            // 
-            this.fecha_inicial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha_inicial.HeaderText = "Fecha Inicial";
-            this.fecha_inicial.Name = "fecha_inicial";
-            // 
-            // fecha_final
-            // 
-            this.fecha_final.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha_final.HeaderText = "Fecha Final";
-            this.fecha_final.Name = "fecha_final";
-            // 
-            // situacion
-            // 
-            this.situacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.situacion.HeaderText = "Situación";
-            this.situacion.Name = "situacion";
-            // 
-            // usuario
-            // 
-            this.usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            // 
-            // unidad
-            // 
-            this.unidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.unidad.HeaderText = "Unidad";
-            this.unidad.Name = "unidad";
+            this.DescansosT.AllowUserToOrderColumns = true;
+            this.DescansosT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DescansosT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DescansosT.Location = new System.Drawing.Point(-4, 72);
+            this.DescansosT.MultiSelect = false;
+            this.DescansosT.Name = "DescansosT";
+            this.DescansosT.ReadOnly = true;
+            this.DescansosT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DescansosT.Size = new System.Drawing.Size(1001, 278);
+            this.DescansosT.TabIndex = 19;
             // 
             // button3
             // 
@@ -668,16 +575,6 @@
             this.button3.Text = "MODIFICAR";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(663, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 24);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "NUEVO";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label14
             // 
@@ -706,28 +603,41 @@
             this.label12.TabIndex = 13;
             this.label12.Text = "ESPECIALIDAD";
             // 
-            // comboBox3
+            // cmbMes
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(274, 45);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(78, 21);
-            this.comboBox3.TabIndex = 12;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cmbMes.Location = new System.Drawing.Point(274, 45);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(78, 21);
+            this.cmbMes.TabIndex = 12;
             // 
-            // comboBox4
+            // cmbEspeicialidad
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(99, 45);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(101, 21);
-            this.comboBox4.TabIndex = 11;
+            this.cmbEspeicialidad.FormattingEnabled = true;
+            this.cmbEspeicialidad.Location = new System.Drawing.Point(99, 45);
+            this.cmbEspeicialidad.Name = "cmbEspeicialidad";
+            this.cmbEspeicialidad.Size = new System.Drawing.Size(101, 21);
+            this.cmbEspeicialidad.TabIndex = 11;
             // 
-            // textBox9
+            // txtPacientes
             // 
-            this.textBox9.Location = new System.Drawing.Point(87, 12);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 10;
+            this.txtPacientes.Location = new System.Drawing.Point(87, 12);
+            this.txtPacientes.Name = "txtPacientes";
+            this.txtPacientes.Size = new System.Drawing.Size(100, 20);
+            this.txtPacientes.TabIndex = 10;
             // 
             // label13
             // 
@@ -754,6 +664,24 @@
             this.userPage.TabIndex = 3;
             this.userPage.Text = "Usuarios";
             this.userPage.UseVisualStyleBackColor = true;
+            // 
+            // txtSearchU
+            // 
+            this.txtSearchU.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchU.Location = new System.Drawing.Point(103, 30);
+            this.txtSearchU.Name = "txtSearchU";
+            this.txtSearchU.Size = new System.Drawing.Size(391, 30);
+            this.txtSearchU.TabIndex = 15;
+            // 
+            // btnSearchU
+            // 
+            this.btnSearchU.Location = new System.Drawing.Point(11, 27);
+            this.btnSearchU.Name = "btnSearchU";
+            this.btnSearchU.Size = new System.Drawing.Size(86, 33);
+            this.btnSearchU.TabIndex = 14;
+            this.btnSearchU.Text = "Buscar";
+            this.btnSearchU.UseVisualStyleBackColor = true;
+            this.btnSearchU.Click += new System.EventHandler(this.btnSearchU_Click);
             // 
             // btnEliminar
             // 
@@ -892,24 +820,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1049, 460);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // txtSearchU
+            // txtDescanso
             // 
-            this.txtSearchU.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchU.Location = new System.Drawing.Point(103, 30);
-            this.txtSearchU.Name = "txtSearchU";
-            this.txtSearchU.Size = new System.Drawing.Size(391, 30);
-            this.txtSearchU.TabIndex = 15;
-            // 
-            // btnSearchU
-            // 
-            this.btnSearchU.Location = new System.Drawing.Point(11, 27);
-            this.btnSearchU.Name = "btnSearchU";
-            this.btnSearchU.Size = new System.Drawing.Size(86, 33);
-            this.btnSearchU.TabIndex = 14;
-            this.btnSearchU.Text = "Buscar";
-            this.btnSearchU.UseVisualStyleBackColor = true;
-            this.btnSearchU.Click += new System.EventHandler(this.btnSearchU_Click);
+            this.txtDescanso.Location = new System.Drawing.Point(617, 21);
+            this.txtDescanso.Name = "txtDescanso";
+            this.txtDescanso.Size = new System.Drawing.Size(89, 39);
+            this.txtDescanso.TabIndex = 23;
+            this.txtDescanso.Text = "Descanso";
+            this.txtDescanso.UseVisualStyleBackColor = true;
+            this.txtDescanso.Click += new System.EventHandler(this.txtDescanso_Click);
             // 
             // Descansos_Medicos
             // 
@@ -933,7 +854,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.notificaciones.ResumeLayout(false);
             this.notificaciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescansosT)).EndInit();
             this.userPage.ResumeLayout(false);
             this.userPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosT)).EndInit();
@@ -978,13 +899,12 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnNuevoPaciente;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.ComboBox cmbMes;
+        private System.Windows.Forms.ComboBox cmbEspeicialidad;
+        private System.Windows.Forms.TextBox txtPacientes;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabPage userPage;
         private System.Windows.Forms.DataGridView pacienteT;
@@ -1001,19 +921,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn n_pmi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn na;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado_acta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_pmi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_inicial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_final;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
+        private System.Windows.Forms.DataGridView DescansosT;
         private System.Windows.Forms.DataGridView UsuariosT;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -1027,5 +935,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtSearchU;
         private System.Windows.Forms.Button btnSearchU;
+        private System.Windows.Forms.Button txtDescanso;
     }
 }

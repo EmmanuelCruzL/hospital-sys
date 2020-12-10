@@ -22,9 +22,8 @@ namespace hospital_sys
         private int genderId;
         private String created;
         private String catetegoryValue;
+        private String unit;
 
-
-        public int GenderId { get => genderId; set => genderId = value; }
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Last_name { get => last_name; set => last_name = value; }
@@ -36,7 +35,9 @@ namespace hospital_sys
         public string Arma { get => arma; set => arma = value; }
         public string Guarnicion { get => guarnicion; set => guarnicion = value; }
         public int Category { get => category; set => category = value; }
+        public int GenderId { get => genderId; set => genderId = value; }
         public string Created { get => created; set => created = value; }
         public string CatetegoryValue { get => catetegoryValue; set => catetegoryValue = value; }
+        public string Unit { get => unit; set => unit = value; }
     }
 }

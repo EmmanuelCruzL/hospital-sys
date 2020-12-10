@@ -21,7 +21,7 @@ namespace hospital_sys
                     
                     SqlCommand command = new SqlCommand(null,connection);
                     command.Connection.Open();                    
-                    command.CommandText = "select patient_id as id, patient_name as Nombre, last_name as Apellidos, CASE gender WHEN 1 THEN 'Femenino' WHEN 0 THEN 'Masculino' END AS Genero, dni as DNI , grade as Grado , sit_admin as Sit_admin, state_pml as State_Pml, arma as Arma, guarnicion as Guarnicion , categories.name as Categoria, COALESCE (NULLIF (created, ''), SYSDATETIME()) AS Registrado FROM patients INNER JOIN categories ON patients.category_id = categories.category_id;";
+                    command.CommandText = "select patient_id as id, patient_name as Nombre, last_name as Apellidos, CASE gender WHEN 1 THEN 'Femenino' WHEN 0 THEN 'Masculino' END AS Genero, dni as DNI , grade as Grado , sit_admin as Sit_admin, state_pml as State_Pml, arma as Arma, guarnicion as Guarnicion , categories.name as Categoria, COALESCE (NULLIF (created, ''), SYSDATETIME()) AS Registrado,unit as Unidad FROM patients INNER JOIN categories ON patients.category_id = categories.category_id;";
                     SqlDataReader dr = command.ExecuteReader();
                     tabla.Load(dr);
                 }                
@@ -123,6 +123,41 @@ namespace hospital_sys
                 Console.WriteLine(ex.ToString());
             }
             return tabla;
-        } 
+        }
+
+        public PatientModel searchPatient(int id)
+        {
+            PatientModel patient = new PatientModel();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DBConnection.stringConnection))
+                {
+                    SqlCommand command = new SqlCommand(null, connection);
+                    command.Connection.Open();
+                    command.CommandText = "SELECT * FROM  patients WHERE patient_id = " + id;
+                    SqlDataReader dr = command.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        
+                            patient.Id = dr.GetInt32(0);
+                            patient.Name = dr.GetString(1);
+                            patient.Last_name = dr.GetString(2);
+                            patient.Gender = dr.GetString(3);
+                            patient.Dni = dr.GetString(4);
+                            patient.Grade = dr.GetString(5);
+                            patient.Sit_admin = dr.GetString(6);
+                            patient.State_pml = dr.GetString(7);
+
+                        
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return patient;
+        }
     }
 }

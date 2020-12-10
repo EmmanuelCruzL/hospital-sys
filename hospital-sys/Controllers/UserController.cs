@@ -17,7 +17,7 @@ namespace hospital_sys
             DataTable tabla = new DataTable();
             try
             {
-                SqlCommand command = this.prepareCommand("SELECT user_id as ID  ,users.name as Nombre  ,last_name as Apellido,user_password as Contraseña, status as Estado ,user_type as Tipo,specialties.name as Especialidad,departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id");                
+                SqlCommand command = this.prepareCommand("SELECT user_id as ID  ,users.name as Nombre  ,last_name as Apellido,user_password as Contraseña,  status AS Estado,  user_type as Tipo,specialties.name as Especialidad,departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id");                
                 SqlDataReader dr = command.ExecuteReader();
                 tabla.Load(dr);
                 disposeCommand(command);
@@ -102,17 +102,20 @@ namespace hospital_sys
                     command.Connection.Open();
                     command.CommandText = "SELECT * FROM  users WHERE user_id = " + id;
                     SqlDataReader dr = command.ExecuteReader();
-                    while (dr.NextResult())
+                    if (dr.Read())
                     {
-                        user.Id = id;
-                        user.Name = dr.GetString(2);
-                        user.Last_name = dr.GetString(3);
-                        user.Password = dr.GetString(4);
-                        user.Status = dr.GetInt32(5);
-                        user.User_type = dr.GetInt32(6);
-                        user.Specialty = dr.GetInt32(7);
-                        user.Departament = dr.GetInt32(8);
+                        while (dr.NextResult())
+                        {
+                            user.Id = id;
+                            user.Name = dr.GetString(2);
+                            user.Last_name = dr.GetString(3);
+                            user.Password = dr.GetString(4);
+                            user.Status = dr.GetInt32(5);
+                            user.User_type = dr.GetInt32(6);
+                            user.Specialty = dr.GetInt32(7);
+                            user.Departament = dr.GetInt32(8);
 
+                        }
                     }
                 }
                 
@@ -134,7 +137,7 @@ namespace hospital_sys
                 {
                     SqlCommand command = new SqlCommand(null, connection);
                     command.Connection.Open();
-                    String sql = "select user_id as ID, users.name as Nombre, last_name as Apellidos,user_password as Contraseña, CASE status WHEN 1 THEN 'Activo' WHEN 0 THEN 'Inactivo' END AS Status,  CASE user_type WHEN 1 THEN 'Administrador' WHEN 0 THEN 'Doctor' END as Tipo , specialties.name as Especialidad ,  departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id  WHERE CONCAT(users.name,' ',last_name) LIKE '%admin4%';";
+                    String sql = "select user_id as ID, users.name as Nombre, last_name as Apellidos,user_password as Contraseña, status AS Estado,   user_type  as Tipo , specialties.name as Especialidad ,  departaments.name as Departamento FROM users INNER JOIN specialties ON users.specialty_id = specialties.specialty_id INNER JOIN departaments ON users.departament_id = departaments.departament_id  WHERE CONCAT(users.name,' ',last_name) LIKE '%admin4%';";
                     Console.WriteLine(sql);
                     command.CommandText = sql;
                     SqlDataReader dr = command.ExecuteReader();
